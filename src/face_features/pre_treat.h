@@ -10,6 +10,8 @@
 using namespace std;
 using namespace cv;
 
-void resizeAndSave(Mat& src_img, const vector<Point2f>& features, string img_name, int t_w, int t_h);
+void resizeAndSave(Mat& src_img, vector<Point2f>& features, string img_name, int t_w, int t_h);
+void prt_images();
+vector<string> getFiles(string dirname);
 
 #endif //FACE_RCG_PRE_TREAT_H

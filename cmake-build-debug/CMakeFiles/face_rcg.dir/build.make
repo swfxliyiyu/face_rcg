@@ -105,33 +105,9 @@ CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o.provides: CMakeFiles
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o.provides.build: CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o
 
 
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: CMakeFiles/face_rcg.dir/flags.make
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: ../src/face_features/load_data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o -c /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp
-
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp > CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.i
-
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp -o CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.s
-
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires:
-
-.PHONY : CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires
-
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires
-	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides.build
-.PHONY : CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides
-
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides.build: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o
-
-
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: CMakeFiles/face_rcg.dir/flags.make
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: ../src/face_features/pre_treat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o -c /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.cpp
 
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.i: cmake_force
@@ -153,20 +129,44 @@ CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o.provides: CMakeFiles/f
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o.provides.build: CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o
 
 
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: CMakeFiles/face_rcg.dir/flags.make
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: ../src/face_features/load_data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o -c /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp
+
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp > CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.i
+
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp -o CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.s
+
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires:
+
+.PHONY : CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires
+
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides.build
+.PHONY : CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides
+
+CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.provides.build: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o
+
+
 # Object files for target face_rcg
 face_rcg_OBJECTS = \
 "CMakeFiles/face_rcg.dir/src/main.cpp.o" \
 "CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o" \
-"CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o" \
-"CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o"
+"CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o" \
+"CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o"
 
 # External object files for target face_rcg
 face_rcg_EXTERNAL_OBJECTS =
 
 face_rcg: CMakeFiles/face_rcg.dir/src/main.cpp.o
 face_rcg: CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o
-face_rcg: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o
 face_rcg: CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o
+face_rcg: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o
 face_rcg: CMakeFiles/face_rcg.dir/build.make
 face_rcg: /usr/local/lib/libopencv_ml.so.3.2.0
 face_rcg: /usr/local/lib/libopencv_objdetect.so.3.2.0
@@ -195,8 +195,8 @@ CMakeFiles/face_rcg.dir/build: face_rcg
 
 CMakeFiles/face_rcg.dir/requires: CMakeFiles/face_rcg.dir/src/main.cpp.o.requires
 CMakeFiles/face_rcg.dir/requires: CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o.requires
-CMakeFiles/face_rcg.dir/requires: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires
 CMakeFiles/face_rcg.dir/requires: CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o.requires
+CMakeFiles/face_rcg.dir/requires: CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o.requires
 
 .PHONY : CMakeFiles/face_rcg.dir/requires
 

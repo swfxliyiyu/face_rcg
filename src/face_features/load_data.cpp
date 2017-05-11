@@ -25,5 +25,3 @@ std::vector<cv::Point2f> load_features(std::string feature_url) {
     }
     return points;
 }
-
-

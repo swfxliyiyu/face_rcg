@@ -90,17 +90,37 @@ string imgName = "../input/image_0001.png";
 //}
 
 int main() {
-//    Mat img = imread("../input/image_0001.png");
-//    vector<Point2f> points = load_features("../input/image_0001.pts");
-//    for (int i = 0; i < points.size(); ++i) {
-//        circle(img, points[i], 3, Scalar(0, 0, 255), CV_FILLED, CV_AA);
+
+    prt_images();
+//    string dir_path = "../input/images/";
+//    vector<string> files = getFiles(dir_path);
+//    for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
+//        string::iterator sit = --(i->end());
+//        if (*sit != 'g') {
+//            files.erase(i);
+//        }
 //    }
-//    imshow("", img);
-//    waitKey();
-//    return 0;
-    Mat img = imread("../input/image_0001.png");
-    vector<Point2f> features = load_features("../input/image_0001.pts");
-    resizeAndSave(img, features, "image_0001", 400, 400);
+//
+//    for (vector<string>::iterator i = files.begin(); i < files.end(); ++i) {
+//        cout << *i << endl;
+//    }
+//    // 对于每个.png文件，提取文件名，处理图片
+//    for (vector<string>::iterator i = files.begin(); i < files.end(); ++i) {
+//        Mat prt_img = imread(dir_path + *i);
+//        cout << dir_path + *i << endl;
+//        int cnt = 0;
+//        for (string::iterator it = --(i->end()); cnt < 4; ++cnt, --it) {
+//            i->erase(it);
+//        }
+//        vector<Point2f> prt_features = load_features(dir_path + *i + ".pts");
+//        for (int j = 0; j < prt_features.size(); ++j) {
+//            Point2f feature = prt_features.at(j);
+//            circle(prt_img, feature, 2, Scalar(0, 0, 0), -1, 8, 0);
+//        }
+//        imshow("", prt_img);
+//        waitKey(0);
+//    }
+
 //    CascadeClassifier cascade;
 //    cascade.load("/opt/opencv/data/haarcascades/haarcascade_frontalface_alt.xml");
 //    vector<Rect> faces = detectFace(img, cascade, 1);
