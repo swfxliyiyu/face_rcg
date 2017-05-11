@@ -12,99 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17ac996e-387d-4d56-8f7d-028fd4156fd3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/input/images/image_0783.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/input/images/image_0783.pts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/face_rcg" afterPath="$PROJECT_DIR$/cmake-build-debug/face_rcg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0128.jpg" afterPath="$PROJECT_DIR$/input/images/image_0128.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0139.jpg" afterPath="$PROJECT_DIR$/input/images/image_0139.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0143.jpg" afterPath="$PROJECT_DIR$/input/images/image_0143.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0176.jpg" afterPath="$PROJECT_DIR$/input/images/image_0176.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0182.jpg" afterPath="$PROJECT_DIR$/input/images/image_0182.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0187.jpg" afterPath="$PROJECT_DIR$/input/images/image_0187.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0188.jpg" afterPath="$PROJECT_DIR$/input/images/image_0188.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0189.jpg" afterPath="$PROJECT_DIR$/input/images/image_0189.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0190.jpg" afterPath="$PROJECT_DIR$/input/images/image_0190.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0238.jpg" afterPath="$PROJECT_DIR$/input/images/image_0238.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0254.jpg" afterPath="$PROJECT_DIR$/input/images/image_0254.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0262.jpg" afterPath="$PROJECT_DIR$/input/images/image_0262.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0273.jpg" afterPath="$PROJECT_DIR$/input/images/image_0273.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0275.jpg" afterPath="$PROJECT_DIR$/input/images/image_0275.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0322.jpg" afterPath="$PROJECT_DIR$/input/images/image_0322.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0323.jpg" afterPath="$PROJECT_DIR$/input/images/image_0323.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0328.jpg" afterPath="$PROJECT_DIR$/input/images/image_0328.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0346.jpg" afterPath="$PROJECT_DIR$/input/images/image_0346.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0408.jpg" afterPath="$PROJECT_DIR$/input/images/image_0408.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0430.jpg" afterPath="$PROJECT_DIR$/input/images/image_0430.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0443.jpg" afterPath="$PROJECT_DIR$/input/images/image_0443.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0470.jpg" afterPath="$PROJECT_DIR$/input/images/image_0470.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0473.jpg" afterPath="$PROJECT_DIR$/input/images/image_0473.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0480.jpg" afterPath="$PROJECT_DIR$/input/images/image_0480.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0502.jpg" afterPath="$PROJECT_DIR$/input/images/image_0502.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0506.jpg" afterPath="$PROJECT_DIR$/input/images/image_0506.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0510.jpg" afterPath="$PROJECT_DIR$/input/images/image_0510.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0518.jpg" afterPath="$PROJECT_DIR$/input/images/image_0518.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0558.jpg" afterPath="$PROJECT_DIR$/input/images/image_0558.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0569.jpg" afterPath="$PROJECT_DIR$/input/images/image_0569.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0573.jpg" afterPath="$PROJECT_DIR$/input/images/image_0573.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0592.jpg" afterPath="$PROJECT_DIR$/input/images/image_0592.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0598.jpg" afterPath="$PROJECT_DIR$/input/images/image_0598.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0602.jpg" afterPath="$PROJECT_DIR$/input/images/image_0602.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0607.jpg" afterPath="$PROJECT_DIR$/input/images/image_0607.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0636.jpg" afterPath="$PROJECT_DIR$/input/images/image_0636.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0641.jpg" afterPath="$PROJECT_DIR$/input/images/image_0641.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0671.jpg" afterPath="$PROJECT_DIR$/input/images/image_0671.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0701.jpg" afterPath="$PROJECT_DIR$/input/images/image_0701.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0726.jpg" afterPath="$PROJECT_DIR$/input/images/image_0726.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0733.jpg" afterPath="$PROJECT_DIR$/input/images/image_0733.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0735.jpg" afterPath="$PROJECT_DIR$/input/images/image_0735.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0743.jpg" afterPath="$PROJECT_DIR$/input/images/image_0743.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0748.jpg" afterPath="$PROJECT_DIR$/input/images/image_0748.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0755.jpg" afterPath="$PROJECT_DIR$/input/images/image_0755.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0777.jpg" afterPath="$PROJECT_DIR$/input/images/image_0777.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0791.jpg" afterPath="$PROJECT_DIR$/input/images/image_0791.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0803.jpg" afterPath="$PROJECT_DIR$/input/images/image_0803.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0806.jpg" afterPath="$PROJECT_DIR$/input/images/image_0806.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0817.jpg" afterPath="$PROJECT_DIR$/input/images/image_0817.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0838.jpg" afterPath="$PROJECT_DIR$/input/images/image_0838.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0840.jpg" afterPath="$PROJECT_DIR$/input/images/image_0840.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0855.jpg" afterPath="$PROJECT_DIR$/input/images/image_0855.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0143.pts" afterPath="$PROJECT_DIR$/input/images/image_0143.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0188.pts" afterPath="$PROJECT_DIR$/input/images/image_0188.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0190.pts" afterPath="$PROJECT_DIR$/input/images/image_0190.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0238.pts" afterPath="$PROJECT_DIR$/input/images/image_0238.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0262.pts" afterPath="$PROJECT_DIR$/input/images/image_0262.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0273.pts" afterPath="$PROJECT_DIR$/input/images/image_0273.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0322.pts" afterPath="$PROJECT_DIR$/input/images/image_0322.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0328.pts" afterPath="$PROJECT_DIR$/input/images/image_0328.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0408.pts" afterPath="$PROJECT_DIR$/input/images/image_0408.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0473.pts" afterPath="$PROJECT_DIR$/input/images/image_0473.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0510.pts" afterPath="$PROJECT_DIR$/input/images/image_0510.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0558.pts" afterPath="$PROJECT_DIR$/input/images/image_0558.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0592.pts" afterPath="$PROJECT_DIR$/input/images/image_0592.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0636.pts" afterPath="$PROJECT_DIR$/input/images/image_0636.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0641.pts" afterPath="$PROJECT_DIR$/input/images/image_0641.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0701.pts" afterPath="$PROJECT_DIR$/input/images/image_0701.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0733.pts" afterPath="$PROJECT_DIR$/input/images/image_0733.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0735.pts" afterPath="$PROJECT_DIR$/input/images/image_0735.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0743.pts" afterPath="$PROJECT_DIR$/input/images/image_0743.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0806.pts" afterPath="$PROJECT_DIR$/input/images/image_0806.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0838.pts" afterPath="$PROJECT_DIR$/input/images/image_0838.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/images/image_0855.pts" afterPath="$PROJECT_DIR$/input/images/image_0855.pts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/load_data.cpp" afterPath="$PROJECT_DIR$/src/face_features/load_data.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/load_data.h" afterPath="$PROJECT_DIR$/src/face_features/load_data.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/pre_treat.cpp" afterPath="$PROJECT_DIR$/src/face_features/pre_treat.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/pre_treat.h" afterPath="$PROJECT_DIR$/src/face_features/pre_treat.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -117,10 +25,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-404">
+            <state relative-caret-position="-92">
               <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -129,14 +37,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pre_treat.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pre_treat.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5434">
-              <caret line="216" column="42" lean-forward="false" selection-start-line="216" selection-start-column="42" selection-end-line="216" selection-end-column="42" />
-              <folding>
-                <element signature="e#43#65#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="884">
+              <caret line="101" column="46" lean-forward="true" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,11 +50,9 @@
       <file leaf-file-name="load_data.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#43#74#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="676">
+              <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,7 +80,7 @@
       <file leaf-file-name="pre_treat.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="312">
               <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding />
             </state>
@@ -611,7 +515,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48498000" />
+    <option name="totallyTimeSpent" value="48617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1543" height="912" extended-state="6" />
@@ -629,14 +533,25 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="61" y="24" width="1068" height="512" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33582088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14795588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,9 +589,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="63" />
-          <folding>
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -691,9 +604,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#65#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -718,9 +629,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="63" />
-          <folding>
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,9 +687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="63" />
-          <folding>
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -838,9 +745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="63" />
-          <folding>
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,7 +941,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="312">
           <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding />
         </state>
@@ -1044,31 +949,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="676">
+          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
           <folding>
-            <element signature="e#43#74#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5434">
-          <caret line="216" column="42" lean-forward="false" selection-start-line="216" selection-start-column="42" selection-end-line="216" selection-end-column="42" />
-          <folding>
-            <element signature="e#43#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-404">
-          <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="884">
+          <caret line="101" column="46" lean-forward="true" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
