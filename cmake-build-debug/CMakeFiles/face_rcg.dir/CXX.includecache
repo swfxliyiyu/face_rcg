@@ -31,8 +31,18 @@ opencv2/imgcodecs.hpp
 -
 fstream
 -
+iostream
+-
 load_data.h
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+pre_treat.h
+/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+dirent.h
+-
+opencv2/contrib/contrib.hpp
+/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/contrib/contrib.hpp
+boost/regex.hpp
+-
 
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
 
@@ -53,6 +63,8 @@ load_data.h
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
 boost/regex.hpp
 -
+opencv/cv.hpp
+-
 
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
 opencv2/core/mat.hpp
@@ -67,12 +79,42 @@ opencv2/imgproc.hpp
 /home/swfxliyiyu/CLionProjects/face_rcg/src/opencv2/imgproc.hpp
 iostream
 -
-../src/face_features/load_data.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
-../src/face_features/detect_face.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+regex
+-
 face_features/pre_treat.h
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+
+/usr/local/include/opencv/cv.h
+opencv2/core/core_c.h
+/usr/local/include/opencv/opencv2/core/core_c.h
+opencv2/imgproc/imgproc_c.h
+/usr/local/include/opencv/opencv2/imgproc/imgproc_c.h
+opencv2/photo/photo_c.h
+/usr/local/include/opencv/opencv2/photo/photo_c.h
+opencv2/video/tracking_c.h
+/usr/local/include/opencv/opencv2/video/tracking_c.h
+opencv2/objdetect/objdetect_c.h
+/usr/local/include/opencv/opencv2/objdetect/objdetect_c.h
+
+/usr/local/include/opencv/cv.hpp
+cv.h
+/usr/local/include/opencv/cv.h
+opencv2/core.hpp
+/usr/local/include/opencv/opencv2/core.hpp
+opencv2/imgproc.hpp
+/usr/local/include/opencv/opencv2/imgproc.hpp
+opencv2/photo.hpp
+/usr/local/include/opencv/opencv2/photo.hpp
+opencv2/video.hpp
+/usr/local/include/opencv/opencv2/video.hpp
+opencv2/highgui.hpp
+/usr/local/include/opencv/opencv2/highgui.hpp
+opencv2/features2d.hpp
+/usr/local/include/opencv/opencv2/features2d.hpp
+opencv2/calib3d.hpp
+/usr/local/include/opencv/opencv2/calib3d.hpp
+opencv2/objdetect.hpp
+/usr/local/include/opencv/opencv2/objdetect.hpp
 
 /usr/local/include/opencv/cxcore.h
 opencv2/core/core_c.h

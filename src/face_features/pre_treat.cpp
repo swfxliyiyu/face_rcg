@@ -1,5 +1,5 @@
 //
-// Created by swfxliyiyu on 17-5-9.
+// Created by yiyuli@pku.edu.cn on 17-5-9.
 //
 
 #include "pre_treat.h"
@@ -10,17 +10,26 @@
 #include "opencv2/contrib/contrib.hpp"
 #include "load_data.h"
 #include <boost/regex.hpp>
+#include <opencv/cv.hpp>
 
-Rect getFeatureRect(const vector<Point2f> &vector);
+
 
 void saveFeatures(vector<Point2f> &vector, string path, string image_name);
 
 
+Mat rot_scale_align(Mat mat, float cx, float cy, int n);
+
 using namespace std;
 using namespace cv;
 
-
-
+/**
+ * 调整特征点坐标
+ * @param features 输入特征点数组
+ * @param x_move 移动横坐标
+ * @param y_move 移动纵坐标
+ * @param w_scale 宽度变换规模
+ * @param h_scale 高度变换规模
+ */
 void resizeFeatures(vector<Point2f> &features, int x_move, int y_move, float w_scale, float h_scale) {
 
     for (vector<Point2f>::iterator itr = features.begin(); itr < features.end(); ++itr) {
@@ -37,8 +46,7 @@ void resizeFeatures(vector<Point2f> &features, int x_move, int y_move, float w_s
 
 }
 
-void translate(cv::Mat const& src, cv::Mat& dst, int dx, int dy)
-{
+void translate(cv::Mat const &src, cv::Mat &dst, int dx, int dy) {
     CV_Assert(src.depth() == CV_8U);
     const int rows = src.rows;
     const int cols = src.cols;
@@ -58,6 +66,14 @@ void translate(cv::Mat const& src, cv::Mat& dst, int dx, int dy)
     }
 }
 
+/**
+ * 调整图片和特征点大小
+ * @param src_img 输入图片
+ * @param features 特征点数组
+ * @param img_name 图片名称
+ * @param t_w 目标图片宽度
+ * @param t_h 目标图片高度
+ */
 void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int t_w, int t_h) {
 
     // 输出地址
@@ -75,7 +91,7 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
     // 计算新图片位置
     int x = rect.x - rect.width / 4;
     int y = rect.y - rect.height / 2;
-    int w = rect.width * 3/2;
+    int w = rect.width * 3 / 2;
     int h = rect.height * 2;
 //    // 如果越界则不作为训练样本
 //    if (x < 0 || y < 0 || x + w >= src_img.cols || y + h >= src_img.rows) {
@@ -89,23 +105,23 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
         std::cout << img_name << "采样越界，进行平移" << endl;
         cout << "x:" << x << endl;
         cout << "y:" << y << endl;
-        cout << "x+w:" << x+w << endl;
-        cout << "y+h:" << y+h << endl;
+        cout << "x+w:" << x + w << endl;
+        cout << "y+h:" << y + h << endl;
         cout << "cols:" << src_img.cols << endl;
         cout << "rows:" << src_img.rows << endl;
-        int x_move;
-        int y_move;
+        int x_move = 0;
+        int y_move = 0;
         if (x < 0) {
             x_move = -x + 1;
             x += x_move;
-        } else if ( x + w >= src_img.cols ) {
+        } else if (x + w >= src_img.cols) {
             x_move = src_img.cols - x - w - 1;
             x += x_move;
         }
         if (y < 0) {
             y_move = -y + 1;
             y += y_move;
-        } else if ( y + h >= src_img.rows ){
+        } else if (y + h >= src_img.rows) {
             y_move = src_img.rows - x - w - 1;
             y += y_move;
         }
@@ -120,8 +136,8 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
             std::cout << img_name << "平移后仍越界，不作为训练样本" << endl;
             cout << "x:" << x << endl;
             cout << "y:" << y << endl;
-            cout << "x+w:" << x+w << endl;
-            cout << "y+h:" << y+h << endl;
+            cout << "x+w:" << x + w << endl;
+            cout << "y+h:" << y + h << endl;
             cout << "cols:" << src_img.cols << endl;
             cout << "rows:" << src_img.rows << endl;
             return;
@@ -148,7 +164,11 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
 
 }
 
-
+/**
+ * 获取指定特征点的包围框
+ * @param features 特征点数组
+ * @return
+ */
 Rect getFeatureRect(const vector <Point2f> &features) {
     // 初始化特征框的上下左右边界
     int top = INT_MAX, bot = 0,
@@ -164,6 +184,12 @@ Rect getFeatureRect(const vector <Point2f> &features) {
     return Rect(left, top, right - left, bot - top);
 }
 
+/**
+ * 保存特征点
+ * @param features 特征点数组
+ * @param path 保存路径（包括后缀名）
+ * @param image_name 图片名称
+ */
 void saveFeatures(std::vector<Point2f> &features, string path, string image_name) {
 
     ofstream output(path);
@@ -179,51 +205,200 @@ void saveFeatures(std::vector<Point2f> &features, string path, string image_name
 
 }
 
-vector<string> getFiles(string dirname){
-    DIR *dp;
-    struct dirent *dirp;
-
-    // 存储文件名
-    vector<string> file_names;
-
-    if((dp=opendir(dirname.c_str()))==NULL){
-        perror("opendir error");
-        exit(1);
-    }
-
-    while((dirp=readdir(dp))!=NULL){
-        if((strcmp(dirp->d_name,".")==0)||(strcmp(dirp->d_name,"..")==0))
-            continue;
-        file_names.push_back(string(dirp->d_name));
-        //printf("%6d:%-19s %5s\n",dirp->d_ino,dirp->d_name,(dirp->d_type==DT_DIR)?("(DIR)"):(""));
-    }
-
-    return file_names;
-}
-
-void prt_images() {
-    string dir_path = "../input/raw_images/";
+/**
+ * 获取图片名称（不包含后缀名）
+ * @param dir_path 图片路径
+ * @return vector 图片名称数组
+ */
+vector<string> getImgNames(string dir_path){
     vector<string> files = getFiles(dir_path);
-    // 删除目录中后缀为pts的
+    // 提取目录中的不重复的图片名
     for (vector<string>::iterator i = files.begin(); i < files.end(); ++i) {
         string::iterator sit = --(i->end());
         if (*sit != 'g')
             files.erase(i);
-    }
-    // 对于每个.png文件，提取文件名，处理图片
-    for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
-        int cnt = 0;
-        // 读取图片
-        Mat img = imread(dir_path + (*i));
-        for (string::iterator it = --(i->end()); cnt < 4; ++cnt, --it) {
-            i->erase(it);
+        else {
+            // 删除后缀名
+            int cnt = 0;
+            for (string::iterator it = --(i->end()); cnt < 4; ++cnt, --it) {
+                i->erase(it);
+            }
         }
+    }
+    return files;
+}
+
+/**
+ * 提取图片中包含人脸中的一部分，并对图片和相应特征点进行缩放
+ */
+void prt_images() {
+    string dir_path = "../input/raw_images/";
+    vector<string> files = getFiles(dir_path);
+    // 对于每个文件名，处理图片
+    for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
+        // 读取图片
+        Mat img = imread(dir_path + (*i) + ".jpg");
         // 读取特征
         vector<Point2f> f = load_features(dir_path + (*i) + ".pts");
         // 处理图片
         resizeAndSave(img, f, *i, 400, 450);
-        
     }
-
 }
 
+
+/**
+ * 普氏分析
+ * @param X
+ * @param itol
+ * @param ftol
+ * @return
+ */
+Mat procrustes(const Mat &X, const int itol, const float ftol) {
+
+    // X.cols:特征点个数N，X.rows: 图像数量*2
+    int N = X.cols, n = X.rows / 2;
+    //remove centre of mass
+    Mat P = X.clone();
+    for (int i = 0; i < N; i++) {
+        /*取X第i个列向量*/
+        Mat p = P.col(i);
+        float mx = 0, my = 0;
+        for (int j = 0; j < n; j++) {
+            mx += p.at<float>(2 * j);
+            my += p.at<float>(2 * j + 1);
+        }
+
+        /*分别求图像集，2维空间坐标x和y的平均值*/
+        mx /= n;
+        my /= n;
+        /*对x,y坐标去中心化*/
+        for (int j = 0; j < n; j++) {
+            p.at<float>(2 * j, 0) -= mx;
+            p.at<float>(2 * j + 1, 0) -= my;
+        }
+    }
+    //optimise scale and rotation
+    Mat C_old;
+    for (int iter = 0; iter < itol; iter++) {
+        // 计算（含n个形状）的重心
+        Mat C = P * Mat::ones(N, 1, CV_32F) / N;
+        //C为2n*1维矩阵，含n个重心，对n个重心归一化处理
+        normalize(C, C);
+        if (iter > 0) {
+            if (norm(C, C_old) < ftol)//norm:求绝对范数，小于阈值，则退出循环
+                break;
+        }
+        C_old = C.clone();
+        for (int i = 0; i < N; i++) {
+            //求当前形状与归一化重心之间的旋转角度
+            Mat R = rot_scale_align(P.col(i), C.at<float>(i * 2, n), C.at<float>(i * 2 + 1), n);
+            for (int j = 0; j < n; j++) {
+                float x = P.at<float>(2 * j, i), y = P.at<float>(2 * j + 1, i);
+                /*仿射变化*/
+                P.at<float>(2 * j, i) = R.at<float>(0, 0) * x + R.at<float>(0, 1) * y;
+                P.at<float>(2 * j + 1, i) = R.at<float>(1, 0) * x + R.at<float>(1, 1) * y;
+            }
+        }
+    }
+    return P;
+}
+
+/**
+ * 普氏分析中用于提取旋转矩阵
+ * @param mat
+ * @param cx
+ * @param cy
+ * @param n
+ * @return
+ */
+Mat rot_scale_align(Mat mat, float cx, float cy, int n) {
+    // rot为旋转矩阵
+    Mat rot;
+    rot.create(2, 2, CV_32F);
+    // 计算矩阵元素
+    float a = 0, b = 0;
+    float sum_square = 0;
+    for (int i = 0; i < n; ++i) {
+        // 第i个图像的特征点x，y。求x*cx + y*cy
+        a += mat.at<float>(2 * i) * cx + mat.at<float>(2 * i + 1) * cy;
+        // 第i个图像的特征点x，y。求x*cx - y*cy
+        b += mat.at<float>(2 * i) * cx - mat.at<float>(2 * i + 1) * cy;
+        // 求x,y平方和
+        sum_square += pow(mat.at<float>(2 * i), 2) + pow(mat.at<float>(2 * i + 1), 2);
+    }
+    a /= sum_square;
+    b /= sum_square;
+    // 赋值矩阵
+    rot.at<float>(0, 0) = a;
+    rot.at<float>(0, 1) = -b;
+    rot.at<float>(1, 0) = b;
+    rot.at<float>(1, 1) = a;
+    return rot;
+}
+
+
+/**
+ * 获取平均脸
+ * @param dirpath 特征点目录
+ */
+void getMeanShape(string dirpath) {
+    // 获取图片名
+    vector<string> files = getImgNames(dirpath);
+
+    // faces用于存所有人脸特征，规模为2n*N，n为图像数量，N为特征点数量
+    Mat faces;
+    vector<Point2f> f = load_features(dirpath + files[0] + ".pts");
+    faces.create((int) (files.size() * 2), (int) f.size(), CV_32F);
+    // 载入特征点
+    for (int i = 0; i < files.size(); ++i) {
+        string filename = files[i];
+        vector<Point2f> face = load_features(dirpath + filename + ".pts");
+        Mat mat_x;
+        Mat mat_y;
+
+        mat_x.create(1, (int) (face.size()), CV_32F);
+        mat_y.create(1, (int) (face.size()), CV_32F);
+        for (int j = 0; j < face.size(); ++j) {
+            mat_x.at<float>(j) = face[j].x;
+
+            mat_y.at<float>(j) = face[j].y;
+        }
+        mat_x.copyTo(faces.row(2 * i));
+        mat_y.copyTo(faces.row(2 * i + 1));
+
+    }
+
+//    普氏分析失败，直接求平均效果不错
+//    // 对特征点进行普氏分析
+//    faces = procrustes(faces, 10, 0.1);
+//
+//    faces *= 1e16;
+    // 求平均
+    vector<Point2f> mean_shape;
+    mean_shape.resize(f.size());
+    for (int k = 0; k < f.size(); ++k) {
+        Mat col = faces.col(k);
+        float x_mean = 0;
+        float y_mean = 0;
+        for (int i = 0; i < files.size(); ++i) {
+            x_mean += col.at<float>(2 * i);
+            y_mean += col.at<float>(2 * i + 1);
+        }
+        Point2f fea(x_mean /= files.size(), y_mean /= files.size());
+        mean_shape[k] = fea;
+    }
+    // 保存平均脸
+    Mat mat;
+    Rect rect =getFeatureRect(mean_shape);
+    mat.create(400, 450, CV_8UC3);
+    for (int l = 0; l < mean_shape.size(); ++l) {
+        Point2f p = mean_shape.at(l);
+        circle(mat, p, 2, Scalar(0,255,0),-1,8,0);
+    }
+    imshow("平均脸", mat);
+    waitKey(0);
+    resizeFeatures(mean_shape, -rect.x, -rect.y, 1, 1);
+    saveFeatures(mean_shape, "../input/mean_shape.pts", "mean_shape");
+    cout << "saved mean face" << endl;
+
+}

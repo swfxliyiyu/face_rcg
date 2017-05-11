@@ -1,5 +1,5 @@
 //
-// Created by swfxliyiyu on 17-5-8.
+// Created by yiyuli@pku.edu.cn on 17-5-8.
 //
 
 #ifndef FACE_RCG_DETECT_FACE_H
@@ -10,7 +10,7 @@
 #include "opencv2/imgproc.hpp"
 
 
-std::vector<cv::Rect> detectFace(cv::Mat& img, cv::CascadeClassifier& cascade, double scale);
+std::vector<cv::Rect> detectFaceRect(cv::Mat &img, double scale);
 
 
 #endif //FACE_RCG_DETECT_FACE_H
