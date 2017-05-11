@@ -1,18 +1,25 @@
 //
-// Created by swfxliyiyu on 17-5-8.
+// Created by yiyuli@pku.edu.cn on 17-5-8.
 //
 
 #include <opencv2/imgcodecs.hpp>
 #include "detect_face.h"
-
-#include "opencv2/objdetect.hpp"
-#include "opencv2/imgproc.hpp"
-
+#include "pre_treat.h"
+#include "load_data.h"
 
 using namespace std;
 using namespace cv;
 
-vector<Rect> detectFace(Mat& img, CascadeClassifier& cascade, double scale = 1.0) {
+/**
+ * 检测人脸方框
+ * @param img 输入图片
+ * @param scale 图片放大规模
+ * @return 检测到的人脸框
+ */
+vector<Rect> detectFaceRect(Mat &img, double scale = 1.0) {
+    // 分类器
+    CascadeClassifier cascade;
+    cascade.load("/opt/opencv/data/haarcascades/haarcascade_frontalface_alt.xml");
     // 检测时间
     double t = 0;
     // 存储检测到的脸部方框
@@ -66,3 +73,26 @@ vector<Rect> detectFace(Mat& img, CascadeClassifier& cascade, double scale = 1.0
     return result_faces;
 }
 
+/**
+ * 获取特征框和人脸检测框的均差和均差方差
+ * return int[x_mean, y_mean, w_mean, h_mean, x_var, y_var, w_var, h_var]
+ */
+int* rectMeanVar(string pts_path) {
+
+    int mean_var[8];
+    vector<string> file_names = getImgNames(pts_path);
+    int file_count = file_names.size();
+    for (int i = 0; i < file_count; ++i) {
+        string file_name = file_names[i];
+        vector<Point2f> features = load_features(pts_path + file_name + ".pts");
+        Rect featureRect = getFeatureRect(features);
+        Mat img = imread(pts_path + file_name + "jpg");
+        vector<Rect> face_rects = detectFaceRect(img);
+        // 取与特征点最近的一张人脸框
+        Rect face_rect;
+        for (int j = 0; j < face_rects.size(); ++j) {
+            //TODO
+        }
+    }
+    return mean_var;
+}
