@@ -13,7 +13,6 @@
 #include <opencv/cv.hpp>
 
 
-
 void saveFeatures(vector<Point2f> &vector, string path, string image_name);
 
 
@@ -77,7 +76,7 @@ void translate(cv::Mat const &src, cv::Mat &dst, int dx, int dy) {
 void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int t_w, int t_h) {
 
     // 输出地址
-    string output_path = "/home/swfxliyiyu/CLionProjects/face_rcg/input/images/";
+    string output_path = "/home/swfxliyiyu/CLionProjects/face_rcg/input/";
 //    // 判断文件是否存在
 //    fstream file;
 //    file.open(output_path + img_name + ".jpg", ios::in);
@@ -169,7 +168,7 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
  * @param features 特征点数组
  * @return
  */
-Rect getFeatureRect(const vector <Point2f> &features) {
+Rect getFeatureRect(const vector<Point2f> &features) {
     // 初始化特征框的上下左右边界
     int top = INT_MAX, bot = 0,
             left = INT_MAX, right = 0;
@@ -210,10 +209,10 @@ void saveFeatures(std::vector<Point2f> &features, string path, string image_name
  * @param dir_path 图片路径
  * @return vector 图片名称数组
  */
-vector<string> getImgNames(string dir_path){
+vector<string> getImgNames(string dir_path) {
     vector<string> files = getFiles(dir_path);
     // 提取目录中的不重复的图片名
-    for (vector<string>::iterator i = files.begin(); i < files.end(); ++i) {
+    for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
         string::iterator sit = --(i->end());
         if (*sit != 'g')
             files.erase(i);
@@ -233,7 +232,7 @@ vector<string> getImgNames(string dir_path){
  */
 void prt_images() {
     string dir_path = "../input/raw_images/";
-    vector<string> files = getFiles(dir_path);
+    vector<string> files = getImgNames(dir_path);
     // 对于每个文件名，处理图片
     for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
         // 读取图片
@@ -342,9 +341,9 @@ Mat rot_scale_align(Mat mat, float cx, float cy, int n) {
  * @param dirpath 特征点目录
  */
 void getMeanShape(string dirpath) {
+
     // 获取图片名
     vector<string> files = getImgNames(dirpath);
-
     // faces用于存所有人脸特征，规模为2n*N，n为图像数量，N为特征点数量
     Mat faces;
     vector<Point2f> f = load_features(dirpath + files[0] + ".pts");
@@ -389,15 +388,16 @@ void getMeanShape(string dirpath) {
     }
     // 保存平均脸
     Mat mat;
-    Rect rect =getFeatureRect(mean_shape);
+    Rect rect = getFeatureRect(mean_shape);
     mat.create(400, 450, CV_8UC3);
+
+    resizeFeatures(mean_shape, -rect.x, -rect.y, 1, 1);
     for (int l = 0; l < mean_shape.size(); ++l) {
         Point2f p = mean_shape.at(l);
-        circle(mat, p, 2, Scalar(0,255,0),-1,8,0);
+        circle(mat, p, 2, Scalar(0, 255, 0), -1, 8, 0);
     }
     imshow("平均脸", mat);
     waitKey(0);
-    resizeFeatures(mean_shape, -rect.x, -rect.y, 1, 1);
     saveFeatures(mean_shape, "../input/mean_shape.pts", "mean_shape");
     cout << "saved mean face" << endl;
 

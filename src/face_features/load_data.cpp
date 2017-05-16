@@ -12,6 +12,7 @@
 #include "opencv2/contrib/contrib.hpp"
 #include <boost/regex.hpp>
 using namespace std;
+using namespace cv;
 
 vector<string> getFiles(string dirname) {
     DIR *dp;
@@ -51,4 +52,37 @@ std::vector<cv::Point2f> load_features(std::string feature_url) {
         points.push_back(point);
     }
     return points;
+}
+
+/**
+ * 根据指定地址载入矩阵
+ * @param mat_url
+ * @return
+ */
+Mat loadMat(string mat_url) {
+    ifstream input(mat_url);
+    int rows, cols;
+    input >> rows;
+    input >> cols;
+
+    Mat mat(rows, cols, CV_32F);
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            float t = 0;
+            input >> t;
+            mat.at<float>(i, j) = t;
+        }
+    }
+    cout << mat_url << ":" << mat.size << endl;
+    return mat;
+}
+
+bool existFile(string path) {
+    // 判断文件是否存在
+
+    if (access(path.c_str(), 0) != -1) {
+        cout << path << "已存在" << endl;
+        return true;
+    }
+    return false;
 }

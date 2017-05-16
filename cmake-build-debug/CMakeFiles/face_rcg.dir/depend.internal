@@ -4,6 +4,10 @@
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.cpp
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+ /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+ /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+ /usr/local/include/opencv/cv.h
+ /usr/local/include/opencv/cv.hpp
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
@@ -125,6 +129,14 @@ CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o
  /usr/local/include/opencv2/videostab/ring_buffer.hpp
  /usr/local/include/opencv2/videostab/stabilizer.hpp
  /usr/local/include/opencv2/videostab/wobble_suppression.hpp
+ /usr/local/include/opencv2/viz.hpp
+ /usr/local/include/opencv2/viz/types.hpp
+ /usr/local/include/opencv2/viz/viz3d.hpp
+ /usr/local/include/opencv2/viz/vizcore.hpp
+ /usr/local/include/opencv2/viz/widgets.hpp
+ /usr/local/include/opencv2/xfeatures2d.hpp
+ /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+ /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
@@ -250,6 +262,14 @@ CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o
  /usr/local/include/opencv2/videostab/ring_buffer.hpp
  /usr/local/include/opencv2/videostab/stabilizer.hpp
  /usr/local/include/opencv2/videostab/wobble_suppression.hpp
+ /usr/local/include/opencv2/viz.hpp
+ /usr/local/include/opencv2/viz/types.hpp
+ /usr/local/include/opencv2/viz/viz3d.hpp
+ /usr/local/include/opencv2/viz/vizcore.hpp
+ /usr/local/include/opencv2/viz/widgets.hpp
+ /usr/local/include/opencv2/xfeatures2d.hpp
+ /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+ /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.cpp
@@ -377,7 +397,17 @@ CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o
  /usr/local/include/opencv2/videostab/ring_buffer.hpp
  /usr/local/include/opencv2/videostab/stabilizer.hpp
  /usr/local/include/opencv2/videostab/wobble_suppression.hpp
+ /usr/local/include/opencv2/viz.hpp
+ /usr/local/include/opencv2/viz/types.hpp
+ /usr/local/include/opencv2/viz/viz3d.hpp
+ /usr/local/include/opencv2/viz/vizcore.hpp
+ /usr/local/include/opencv2/viz/widgets.hpp
+ /usr/local/include/opencv2/xfeatures2d.hpp
+ /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+ /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o
+ /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+ /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
  /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
  /home/swfxliyiyu/CLionProjects/face_rcg/src/main.cpp
  /usr/local/include/opencv/cxcore.h
@@ -501,3 +531,11 @@ CMakeFiles/face_rcg.dir/src/main.cpp.o
  /usr/local/include/opencv2/videostab/ring_buffer.hpp
  /usr/local/include/opencv2/videostab/stabilizer.hpp
  /usr/local/include/opencv2/videostab/wobble_suppression.hpp
+ /usr/local/include/opencv2/viz.hpp
+ /usr/local/include/opencv2/viz/types.hpp
+ /usr/local/include/opencv2/viz/viz3d.hpp
+ /usr/local/include/opencv2/viz/vizcore.hpp
+ /usr/local/include/opencv2/viz/widgets.hpp
+ /usr/local/include/opencv2/xfeatures2d.hpp
+ /usr/local/include/opencv2/xfeatures2d/cuda.hpp
+ /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
