@@ -10,7 +10,11 @@
 #include "pre_treat.h"
 #include <dirent.h>
 #include "opencv2/contrib/contrib.hpp"
-#include <boost/regex.hpp>
+#include <boost/tokenizer.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/format.hpp>
+
+
 using namespace std;
 using namespace cv;
 
@@ -64,12 +68,22 @@ Mat loadMat(string mat_url) {
     int rows, cols;
     input >> rows;
     input >> cols;
+    string temp;
+    getline(input, temp);
 
     Mat mat(rows, cols, CV_32F);
     for (int i = 0; i < rows; ++i) {
+        string line;
+        getline(input, line);
+        vector<string> tokens;
+        boost::split(tokens, line, boost::is_any_of("[, ]"));
+        int index = 0;
         for (int j = 0; j < cols; ++j) {
-            float t = 0;
-            input >> t;
+            while (tokens[index].compare("") == 0)  {
+                index++;
+            }
+            float t;
+            sscanf(tokens[index++].c_str(), "%8f", &t);
             mat.at<float>(i, j) = t;
         }
     }

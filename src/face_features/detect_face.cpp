@@ -157,7 +157,7 @@ map<string, float> rectMeanStdDev(string pts_path) {
  */
 Mat computeSIFT(Mat &src_img, vector<Point2f> &feas) {
 
-    cv::Ptr<Feature2D> f2d = xfeatures2d::SURF::create(300);
+    cv::Ptr<Feature2D> f2d = xfeatures2d::SURF::create(100);
 
     // 描述子
     Mat descriptors;
@@ -179,16 +179,16 @@ Mat computeSIFT(Mat &src_img, vector<Point2f> &feas) {
              [&](KeyPoint a, KeyPoint b){ return (bool) (a.response > b.response);});
         cout << kps.size() << "个关键点" << endl;
         int k = kps.size();
-        if (kps.size() > 2) {
-            kps.resize(2);
+        if (kps.size() > 3) {
+            kps.resize(3);
         }
         f2d->compute(src_img, kps, des_temp);
 //        cout << kps.size() << "个关键点可检测" << endl;
         int r = des_temp.rows;
-        for (int l = 0; l < 2 - r; ++l) {
+        for (int l = 0; l < 3 - r; ++l) {
             des_temp.push_back(Mat::zeros(1, 64, CV_32F));
         }
-        for (int m = 0; m < 2; ++m) {
+        for (int m = 0; m < 3; ++m) {
             descriptors.push_back(des_temp.row(m));
         }
 
@@ -270,7 +270,7 @@ void trainModel(string input_path, int itr, int n_vk) {
     vector<string> img_names = getImgNames(input_path + "images/");
     // 处理每个图片名，生成特征向量x0
     Mat pca_fk_mat(0, 0, CV_32F);
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < img_names.size(); ++i) {
         // 获取图片名
         string img_name = img_names[i];
         cout << "正在生成图片:" << img_name << "的初始特征点..." << endl;
@@ -313,12 +313,7 @@ void trainModel(string input_path, int itr, int n_vk) {
 
             vector<Point2f> v0 = randomGenerFeartures(face_rect, mean_sdev,
                                                       Size(img.rows, img.cols), mean_shape);
-            // TODO
-//            for (int j = 0; j < v0.size(); ++j) {
-//                circle(img, v0[j], 2, Scalar(255, 0, 255), -1, 8, 0);
-//            }
-//            imshow("", img);
-//            waitKey();
+
             Mat v0_mat = generMatOfFeature(v0);
             Mat d0_mat = fea_mat - v0_mat;
             imgInfo.vector_vk.push_back(v0_mat);
@@ -333,7 +328,6 @@ void trainModel(string input_path, int itr, int n_vk) {
         }
     }
     // 对fk进行pca压缩
-
     PCA pca(pca_fk_mat, Mat(), CV_PCA_DATA_AS_ROW, 0);
     for (int l = 0; l < pca_fk_mat.rows;) {
         for (map<string, ImgInfo>::iterator it = img_map.begin();
@@ -343,6 +337,7 @@ void trainModel(string input_path, int itr, int n_vk) {
                 Mat fk_t = pca_fk_mat.row(l++);
                 Mat pca_fk(0, 0, CV_32F);
                 pca_fk = pca.project(fk_t);
+//                fk_t.copyTo(pca_fk);
                 cout << pca_fk << endl;
                 cout << pca_fk.size << endl;
                 Mat fk = pca_fk.t();
@@ -398,6 +393,7 @@ void trainModel(string input_path, int itr, int n_vk) {
                     Mat fk_t = pca_fk_mat.row(pca_row++);
                     Mat pca_fk(0, 0, CV_32F);
                     pca_fk = pca.project(fk_t);
+//                    fk_t.copyTo(pca_fk);
                     cout << pca_fk << endl;
                     cout << pca_fk.size << endl;
                     Mat fk = pca_fk.t();
@@ -408,6 +404,7 @@ void trainModel(string input_path, int itr, int n_vk) {
         }
 
         // 保存pca矩阵
+        // TODO
         ostringstream ss;
         ss << "../output/model/p" << i << ".pca";
         ofstream os(ss.str());
@@ -455,26 +452,26 @@ void trainModel(string input_path, int itr, int n_vk) {
             R_k.push_back(R_kj.t());
         }
         // 保存R_k
-        // TODO
-//        for (map<string, ImgInfo>::iterator it = img_map.begin();
-//             it != img_map.end(); ++it) {
-//            ImgInfo &img = it->second;
-//            string imgname = it->first;
-//            Mat v0 = img.vector_vk[0];
-//            Mat f0 = img.vector_fk[0];
-//            Mat v1 = v0 + (R_k*f0);
-//            Mat fea = v0 + (R_k * f0);
-//            Mat image = imread("../input/images/" + imgname + ".jpg");
-//            for (int l = 0; l < v0.rows / 2; ++l) {
-//                Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
-//
-//
-//                circle(image, p1, 2, Scalar(0,255,255), -1,8,0);
-//                cout << p1 << endl;
-//            }
-//            imshow("", image);
-//            waitKey(0);
-//        }
+        for (map<string, ImgInfo>::iterator it = img_map.begin();
+             it != img_map.end(); ++it) {
+            ImgInfo &img = it->second;
+            string imgname = it->first;
+            Mat v0 = img.vector_vk[0];
+            Mat f0 = img.vector_fk[0];
+            Mat v1 = v0 + (R_k*f0);
+            cout << "vk" << v0 << endl;
+            cout << "fk" << f0 << endl;
+            cout << "fea" << v1 << endl;
+            Mat image = imread("../input/images/" + imgname + ".jpg");
+            for (int l = 0; l < v0.rows / 2; ++l) {
+                Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
+
+                circle(image, p1, 2, Scalar(0,255,255), -1,8,0);
+                cout << p1 << endl;
+            }
+            imshow("", image);
+            waitKey(0);
+        }
 
 
 
@@ -500,7 +497,7 @@ int seed = 0;
 
 int normlRandom(float mean, float sdev) {
     default_random_engine engine((unsigned long) (time(0) + (++seed)));
-    normal_distribution<float> distribution(mean, 1);
+    normal_distribution<float> distribution(mean, sdev);
     return (int) lround(distribution(engine));
 }
 
@@ -568,14 +565,19 @@ void test(Mat &img, string input_path, int itr) {
     Mat fk;
     Mat Rk;
     Mat pca_k;
-    Mat ima(img);
+    Mat ima;
+
+    Mat im;
+
+    img.copyTo(ima);
+    img.copyTo(im);
     Mat m_k;
     for (int j = 0; j < vk.rows / 2; ++j) {
         Point2f p(vk.at<float>(2*j), vk.at<float>(2*j+1));
-        circle(ima, p, 2, Scalar(255, 0, 255));
+        circle(ima, p, 2, Scalar(0, 0, 255));
     }
     rectangle(ima, face_rect, Scalar(255,255,0));
-    imshow("test", img);
+    imshow("test", ima);
     waitKey();
 
 
@@ -591,21 +593,26 @@ void test(Mat &img, string input_path, int itr) {
         ss3 << "../output/model/p" << i << ".m";
         m_k = loadMat(ss3.str());
         fk = computeSIFT(img, vk);
-        fk = pca_k * (fk - m_k.t());
+        cout << "fk" << fk << endl;
+        fk = fk - m_k.t();
+        gemm( pca_k, fk, 1, Mat(), 0, fk, 0 );
+//        normalize(fk, fk);
         fk.push_back(1.f);
-        cout << vk << endl;
 
+
+        cout << "Rk" << Rk << endl;
+        cout << "fk" << fk << endl;
         Mat dk = Rk * fk;
+        cout << "dk" << dk << endl;
         vk += dk;
-        cout << Rk;
-        cout << vk;
-        Mat im(img);
+        cout << "vk" << vk << endl;
+
         for (int j = 0; j < vk.rows / 2; ++j) {
             Point2f p(vk.at<float>(2*j), vk.at<float>(2*j+1));
-            circle(im, p, 2, Scalar(255, 0, 255));
+            circle(im, p, 3, Scalar(0, 255, 0));
         }
-        rectangle(ima, face_rect, Scalar(255,255,0));
-        imshow("test", img);
+        rectangle(im, face_rect, Scalar(255,255,0));
+        imshow("test", im);
         waitKey();
     }
 

@@ -61,7 +61,11 @@ dirent.h
 -
 opencv2/contrib/contrib.hpp
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/contrib/contrib.hpp
-boost/regex.hpp
+boost/tokenizer.hpp
+-
+boost/algorithm/string.hpp
+-
+boost/format.hpp
 -
 
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h

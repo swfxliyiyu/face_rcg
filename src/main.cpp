@@ -161,12 +161,12 @@ int main() {
 //    getMeanShape(dir_path);
 //    Mat img = imread("../input/raw_images/image_0001.png");
 //    vector<Point2f> feas = load_features("../input/raw_images/image_0001.pts");
-//    trainModel("../input/", 5, 5);
+    trainModel("../input/", 5, 5);
 
 //    something("../input/", 5, 5);
-    Mat m = imread("../input/images/image_0026.jpg");
+//    Mat m = imread("../input/images/image_0044.jpg");
 //
-    test(m, "../input/", 5);
+//    test(m, "../input/", 5);
 
 
 }
