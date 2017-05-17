@@ -15,6 +15,7 @@
 #include <boost/serialization/base_object.hpp>
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
+#include <set>
 
 using namespace std;
 using namespace cv;
@@ -25,7 +26,7 @@ using namespace cv;
  * @param scale 图片放大规模
  * @return 检测到的人脸框
  */
-vector<Rect> detectFaceRect(Mat &img, double scale = 1.0) {
+vector<Rect> detectFaceRect(const Mat &img, double scale = 1.0) {
     // 分类器
     CascadeClassifier cascade;
     cascade.load("/opt/opencv/data/haarcascades/haarcascade_frontalface_alt.xml");
@@ -270,9 +271,11 @@ void trainModel(string input_path, int itr, int n_vk) {
     vector<string> img_names = getImgNames(input_path + "images/");
     // 处理每个图片名，生成特征向量x0
     Mat pca_fk_mat(0, 0, CV_32F);
-    for (int i = 0; i < img_names.size(); ++i) {
+    set<string> name_set(img_names.begin(), img_names.end());
+    int i = 0;
+    for (set<string>::iterator iterator1 = name_set.begin(); i < 10; ++i, ++iterator1) {
         // 获取图片名
-        string img_name = img_names[i];
+        string img_name = *iterator1;
         cout << "正在生成图片:" << img_name << "的初始特征点..." << endl;
         // 将图片及其矩阵加入map
         img_map[img_name] = ImgInfo();
@@ -406,13 +409,13 @@ void trainModel(string input_path, int itr, int n_vk) {
         // 保存pca矩阵
         // TODO
         ostringstream ss;
-        ss << "../output/model/p" << i << ".pca";
+        ss << "../output/model/ptest" << i << ".pca";
         ofstream os(ss.str());
         os << pca.eigenvectors.rows << " " << pca.eigenvectors.cols << endl;
         os << pca.eigenvectors;
         os.close();
         ostringstream ss1;
-        ss1 << "../output/model/p" << i << ".m";
+        ss1 << "../output/model/ptest" << i << ".m";
         os.open(ss1.str());
         os << pca.mean.rows << " " << pca.mean.cols << endl;
         os << pca.mean;
@@ -452,17 +455,45 @@ void trainModel(string input_path, int itr, int n_vk) {
             R_k.push_back(R_kj.t());
         }
         // 保存R_k
+
+        cout << "正在保存R_" << i << "..." << endl;
+        ostringstream oss;
+        oss << "../output/model/Rtest" << i << ".mdl";
+        ofstream output;
+        output.open(oss.str());
+        output << R_k.rows << " " << R_k.cols << endl;
+        output << R_k;
+        output.close();
+
         for (map<string, ImgInfo>::iterator it = img_map.begin();
              it != img_map.end(); ++it) {
             ImgInfo &img = it->second;
             string imgname = it->first;
             Mat v0 = img.vector_vk[0];
-            Mat f0 = img.vector_fk[0];
-            Mat v1 = v0 + (R_k*f0);
-            cout << "vk" << v0 << endl;
-            cout << "fk" << f0 << endl;
-            cout << "fea" << v1 << endl;
             Mat image = imread("../input/images/" + imgname + ".jpg");
+            Mat test = computeSIFT(image, v0);
+            Mat f0 = computeSIFT(image, v0);
+            Mat fk = img.vector_fk[0];
+            cout << fk.t() << endl;
+
+            Mat R = R_k;
+            pca.project(f0.t(), f0);
+            pca.project(test.t(), test);
+
+            f0 = f0.t();
+            test = test.t();
+            cout << f0.t() << endl;
+            cout << test.t() << endl;
+
+            f0.push_back(1.f);
+            Mat d0 = (R*f0);
+            Mat v1 = v0 + d0;
+
+            cout << "Rk" << R << endl;
+            cout << "fk" << f0<< endl;
+            cout << "d0" << d0 << endl;
+            cout << "v1" << v0 << endl;
+
             for (int l = 0; l < v0.rows / 2; ++l) {
                 Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
 
@@ -472,17 +503,6 @@ void trainModel(string input_path, int itr, int n_vk) {
             imshow("", image);
             waitKey(0);
         }
-
-
-
-        cout << "正在保存R_" << i << "..." << endl;
-        ostringstream oss;
-        oss << "../output/model/R" << i << ".mdl";
-        ofstream output;
-        output.open(oss.str());
-        output << R_k.rows << " " << R_k.cols << endl;
-        output << R_k;
-        output.close();
     }
 }
 

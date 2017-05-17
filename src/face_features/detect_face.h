@@ -13,7 +13,7 @@ using namespace std;
 using namespace cv;
 
 
-std::vector<cv::Rect> detectFaceRect(cv::Mat &img, double scale);
+std::vector<cv::Rect> detectFaceRect(const cv::Mat &img, double scale);
 map<string, float> rectMeanStdDev(string pts_path);
 void computeSIFT(Mat &src_img, vector<Point2f> &feas, Mat &dst);
 vector<Point2f> randomGenerFeartures(const Rect &face_rect,

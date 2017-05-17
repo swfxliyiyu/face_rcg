@@ -83,7 +83,7 @@ Mat loadMat(string mat_url) {
                 index++;
             }
             float t;
-            sscanf(tokens[index++].c_str(), "%8f", &t);
+            sscanf(tokens[index++].c_str(), "%f", &t);
             mat.at<float>(i, j) = t;
         }
     }
