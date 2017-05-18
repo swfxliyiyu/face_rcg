@@ -9,6 +9,6 @@ using namespace cv;
 
 std::vector<cv::Point2f> load_features(std::string);
 std::vector<std::string> getFiles(std::string dirname);
-Mat loadMat(string mat_url);
+void loadMat(string mat_url, Mat &result);
 
 #endif //FACE_RCG_LOAD_DATA_H

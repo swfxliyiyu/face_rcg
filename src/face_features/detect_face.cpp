@@ -273,7 +273,7 @@ void trainModel(string input_path, int itr, int n_vk) {
     Mat pca_fk_mat(0, 0, CV_32F);
     set<string> name_set(img_names.begin(), img_names.end());
     int i = 0;
-    for (set<string>::iterator iterator1 = name_set.begin(); i < 10; ++i, ++iterator1) {
+    for (set<string>::iterator iterator1 = name_set.begin(); i < img_names.size(); ++i, ++iterator1) {
         // 获取图片名
         string img_name = *iterator1;
         cout << "正在生成图片:" << img_name << "的初始特征点..." << endl;
@@ -409,13 +409,13 @@ void trainModel(string input_path, int itr, int n_vk) {
         // 保存pca矩阵
         // TODO
         ostringstream ss;
-        ss << "../output/model/ptest" << i << ".pca";
+        ss << "../output/model/p" << i << ".pca";
         ofstream os(ss.str());
         os << pca.eigenvectors.rows << " " << pca.eigenvectors.cols << endl;
         os << pca.eigenvectors;
         os.close();
         ostringstream ss1;
-        ss1 << "../output/model/ptest" << i << ".m";
+        ss1 << "../output/model/p" << i << ".m";
         os.open(ss1.str());
         os << pca.mean.rows << " " << pca.mean.cols << endl;
         os << pca.mean;
@@ -435,74 +435,67 @@ void trainModel(string input_path, int itr, int n_vk) {
         cout << "正在计算本轮的R_k..." << endl;
         R_k = Mat(0, 0, CV_32F);
 
-        for (int j = 0; j < 68 * 2; ++j) {
-            Mat y(0, 0, CV_32F);
-            for (map<string, ImgInfo>::iterator it = img_map.begin();
-                 it != img_map.end(); ++it) {
-                ImgInfo info = it->second;
-                for (int k = 0; k < info.vector_dk.size(); ++k) {
-                    y.push_back(info.vector_dk[k].at<float>(j));
-                }
+        Mat y(0, 0, CV_32F);
+        for (map<string, ImgInfo>::iterator it = img_map.begin();
+             it != img_map.end(); ++it) {
+            ImgInfo info = it->second;
+            for (int k = 0; k < info.vector_dk.size(); ++k) {
+                y.push_back(info.vector_dk[k].t());
             }
-            Mat R_kj;
-            Mat x_t = x.t();
-            cout << "正在计算R_k" << j << endl;
-//            R_kj = (x_t*x).inv()*(x_t*y);
-
-
-            solve(x_t * x, x_t * y, R_kj, CV_SVD_SYM);
-            cout << R_kj.t() << endl;
-            R_k.push_back(R_kj.t());
         }
+
+        Mat x_t = x.t();
+        cout << "正在计算R_k" << endl;
+//            R_k = (x_t*x).inv()*(x_t*y);
+
+        solve(x_t * x, x_t * y, R_k, CV_SVD_SYM);
+        R_k = R_k.t();
+        cout << R_k << endl;
+
+
         // 保存R_k
 
         cout << "正在保存R_" << i << "..." << endl;
         ostringstream oss;
-        oss << "../output/model/Rtest" << i << ".mdl";
+        oss << "../output/model/R" << i << ".mdl";
         ofstream output;
         output.open(oss.str());
         output << R_k.rows << " " << R_k.cols << endl;
         output << R_k;
         output.close();
 
-        for (map<string, ImgInfo>::iterator it = img_map.begin();
-             it != img_map.end(); ++it) {
-            ImgInfo &img = it->second;
-            string imgname = it->first;
-            Mat v0 = img.vector_vk[0];
-            Mat image = imread("../input/images/" + imgname + ".jpg");
-            Mat test = computeSIFT(image, v0);
-            Mat f0 = computeSIFT(image, v0);
-            Mat fk = img.vector_fk[0];
-            cout << fk.t() << endl;
-
-            Mat R = R_k;
-            pca.project(f0.t(), f0);
-            pca.project(test.t(), test);
-
-            f0 = f0.t();
-            test = test.t();
-            cout << f0.t() << endl;
-            cout << test.t() << endl;
-
-            f0.push_back(1.f);
-            Mat d0 = (R*f0);
-            Mat v1 = v0 + d0;
-
-            cout << "Rk" << R << endl;
-            cout << "fk" << f0<< endl;
-            cout << "d0" << d0 << endl;
-            cout << "v1" << v0 << endl;
-
-            for (int l = 0; l < v0.rows / 2; ++l) {
-                Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
-
-                circle(image, p1, 2, Scalar(0,255,255), -1,8,0);
-                cout << p1 << endl;
-            }
-            imshow("", image);
-            waitKey(0);
-        }
+//        for (map<string, ImgInfo>::iterator it = img_map.begin();
+//             it != img_map.end(); ++it) {
+//            ImgInfo &img = it->second;
+//            string imgname = it->first;
+//            Mat v0 = img.vector_vk[0];
+//            Mat image = imread("../input/images/" + imgname + ".jpg");
+//            Mat f0 = img.vector_vk[0];
+//
+//            Mat R = R_k;
+//            pca.project(f0.t(), f0);
+//
+//            f0 = f0.t();
+////            cout << f0.t() << endl;
+//
+//            f0.push_back(1.f);
+//            Mat d0 = (R*f0);
+//            Mat v1 = v0 + d0;
+//
+////            cout << "Rk" << R << endl;
+////            cout << "fk" << f0<< endl;
+////            cout << "d0" << d0 << endl;
+////            cout << "v1" << v0 << endl;
+//
+//            for (int l = 0; l < v0.rows / 2; ++l) {
+//                Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
+//
+//                circle(image, p1, 2, Scalar(0,255,255), -1,8,0);
+//                cout << p1 << endl;
+//            }
+//            imshow("", image);
+//            waitKey(0);
+//        }
     }
 }
 
@@ -605,13 +598,13 @@ void test(Mat &img, string input_path, int itr) {
     for (int i = 0; i < itr; ++i) {
         stringstream ss1;
         ss1 << "../output/model/R" << i << ".mdl";
-        Rk = loadMat(ss1.str());
+        loadMat(ss1.str(), Rk);
         stringstream ss2;
         ss2 << "../output/model/p" << i << ".pca";
-        pca_k = loadMat(ss2.str());
+        loadMat(ss2.str(), pca_k);
         stringstream ss3;
         ss3 << "../output/model/p" << i << ".m";
-        m_k = loadMat(ss3.str());
+        loadMat(ss3.str(), m_k);
         fk = computeSIFT(img, vk);
         cout << "fk" << fk << endl;
         fk = fk - m_k.t();

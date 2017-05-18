@@ -63,7 +63,7 @@ std::vector<cv::Point2f> load_features(std::string feature_url) {
  * @param mat_url
  * @return
  */
-Mat loadMat(string mat_url) {
+void loadMat(string mat_url, Mat &result) {
     ifstream input(mat_url);
     int rows, cols;
     input >> rows;
@@ -71,7 +71,7 @@ Mat loadMat(string mat_url) {
     string temp;
     getline(input, temp);
 
-    Mat mat(rows, cols, CV_32F);
+    result = Mat(rows, cols, CV_32F);
     for (int i = 0; i < rows; ++i) {
         string line;
         getline(input, line);
@@ -84,11 +84,10 @@ Mat loadMat(string mat_url) {
             }
             float t;
             sscanf(tokens[index++].c_str(), "%f", &t);
-            mat.at<float>(i, j) = t;
+            result.at<float>(i, j) = t;
         }
     }
-    cout << mat_url << ":" << mat.size << endl;
-    return mat;
+    cout << mat_url << ":" << result.size << endl;
 }
 
 bool existFile(string path) {

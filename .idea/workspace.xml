@@ -12,11 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17ac996e-387d-4d56-8f7d-028fd4156fd3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/model/Rtest0.mdl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/model/Rtest1.mdl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/model/ptest0.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/model/ptest0.pca" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/model/ptest1.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/model/ptest1.pca" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/model/p0.m" afterPath="$PROJECT_DIR$/output/model/p0.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/model/p0.pca" afterPath="$PROJECT_DIR$/output/model/p0.pca" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/detect_face.cpp" afterPath="$PROJECT_DIR$/src/face_features/detect_face.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/detect_face.h" afterPath="$PROJECT_DIR$/src/face_features/detect_face.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/load_data.cpp" afterPath="$PROJECT_DIR$/src/face_features/load_data.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/load_data.h" afterPath="$PROJECT_DIR$/src/face_features/load_data.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -33,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="163" column="32" lean-forward="false" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+            <state relative-caret-position="3792">
+              <caret line="166" column="32" lean-forward="false" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
               <folding>
                 <element signature="e#50#69#0" expanded="true" />
               </folding>
@@ -57,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detect_face.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detect_face.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4264">
-              <caret line="487" column="0" lean-forward="false" selection-start-line="487" selection-start-column="0" selection-end-line="487" selection-end-column="0" />
+            <state relative-caret-position="115">
+              <caret line="606" column="15" lean-forward="false" selection-start-line="606" selection-start-column="8" selection-end-line="606" selection-end-column="15" />
               <folding>
                 <element signature="e#50#82#0" expanded="true" />
               </folding>
@@ -69,11 +75,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ptest0.pca" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output/model/ptest0.pca">
+      <file leaf-file-name="image_0001.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/image_0001.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mean_shape.pts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/mean_shape.pts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2574731">
-              <caret line="10" column="192493" lean-forward="false" selection-start-line="10" selection-start-column="192493" selection-end-line="10" selection-end-column="192493" />
+            <state relative-caret-position="959">
+              <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -82,11 +95,21 @@
       <file leaf-file-name="load_data.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="85" column="46" lean-forward="true" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+            <state relative-caret-position="191">
+              <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
               <folding>
                 <element signature="e#50#81#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="load_data.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/face_features/load_data.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,8 +130,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>computeSIFT</find>
-      <find>.m</find>
       <find>repeat</find>
       <find>.mdl</find>
       <find>mean</find>
@@ -130,13 +151,15 @@
       <find>pca</find>
       <find>, -0.4545258, 2.9121237, 2.0123119, -0.75941944, -0.76325434, -0.63160759,</find>
       <find>PCA(</find>
-      <find>100</find>
-      <find>;</find>
       <find>50</find>
-      <find>test</find>
       <find>resize</find>
       <find>circle</find>
       <find>comput</find>
+      <find>test</find>
+      <find>;</find>
+      <find>100</find>
+      <find>10</find>
+      <find>loadmat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,15 +171,15 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="/usr/include/opencv2/contrib/contrib.hpp" />
-        <option value="$PROJECT_DIR$/src/face_features/load_data.h" />
         <option value="$PROJECT_DIR$/output/model/p1.pca" />
         <option value="$PROJECT_DIR$/output/model/R0.mdl" />
         <option value="$PROJECT_DIR$/src/face_features/pre_treat.h" />
         <option value="$PROJECT_DIR$/src/face_features/pre_treat.cpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/src/face_features/load_data.cpp" />
         <option value="$PROJECT_DIR$/src/face_features/detect_face.h" />
+        <option value="$PROJECT_DIR$/src/face_features/load_data.h" />
+        <option value="$PROJECT_DIR$/src/face_features/load_data.cpp" />
         <option value="$PROJECT_DIR$/src/face_features/detect_face.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -568,12 +591,12 @@
       <workItem from="1494827330469" duration="7790000" />
       <workItem from="1494855793106" duration="24523000" />
       <workItem from="1494913209269" duration="8378000" />
-      <workItem from="1494942406610" duration="24289000" />
+      <workItem from="1494942406610" duration="31201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184323000" />
+    <option name="totallyTimeSpent" value="191235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1543" height="912" extended-state="6" />
@@ -584,12 +607,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="163" y="295" width="1068" height="512" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38796416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38796416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16077384" sideWeight="0.49333334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1521014" sideWeight="0.50666666" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27144685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27144685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -608,13 +631,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/face_features/detect_face.cpp</url>
-          <line>487</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -623,40 +639,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3016">
-          <caret line="116" column="13" lean-forward="false" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
-          <folding>
-            <element signature="e#50#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4966">
-          <caret line="191" column="39" lean-forward="false" selection-start-line="191" selection-start-column="38" selection-end-line="191" selection-end-column="39" />
-          <folding>
-            <element signature="e#50#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -801,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input/mean_shape.pts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1174">
-          <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/opencv2/core/types.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -847,14 +822,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/model/p1.pca" />
-    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input/image_0001.pts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -868,15 +835,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/model/R4.mdl" />
-    <entry file="file://$PROJECT_DIR$/input/mean_sdev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/model/R1.mdl" />
     <entry file="file:///opt/opencv/modules/core/src/pca.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -912,6 +870,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/model/ptest0.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv2/core/mat.inl.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="3290" column="0" lean-forward="false" selection-start-line="3290" selection-start-column="0" selection-end-line="3290" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/model/ptest0.pca">
+      <provider editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="193821" lean-forward="false" selection-start-line="10" selection-start-column="193821" selection-end-line="10" selection-end-column="193821" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/face_rcg.cbp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/mean_shape.pts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/mean_sdev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#113#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding>
+            <element signature="e#50#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/output/model/p0.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -927,6 +966,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/model/R1.mdl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2791368">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/image_0004.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="606" column="15" lean-forward="false" selection-start-line="606" selection-start-column="8" selection-end-line="606" selection-end-column="15" />
+          <folding>
+            <element signature="e#50#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/001.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/image_0001.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2123">
@@ -937,71 +1009,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/model/ptest0.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="163" column="32" lean-forward="false" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+        <state relative-caret-position="3792">
+          <caret line="166" column="32" lean-forward="false" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
           <folding>
             <element signature="e#50#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="85" column="46" lean-forward="true" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
-          <folding>
-            <element signature="e#50#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/model/ptest0.pca">
-      <provider editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2574731">
-          <caret line="10" column="192493" lean-forward="false" selection-start-line="10" selection-start-column="192493" selection-end-line="10" selection-end-column="192493" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/opencv2/core/mat.inl.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="3290" column="0" lean-forward="false" selection-start-line="3290" selection-start-column="0" selection-end-line="3290" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="e#113#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4264">
-          <caret line="487" column="0" lean-forward="false" selection-start-line="487" selection-start-column="0" selection-end-line="487" selection-end-column="0" />
-          <folding>
-            <element signature="e#50#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
