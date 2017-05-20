@@ -87,6 +87,8 @@ opencv2/contrib/contrib.hpp
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/contrib/contrib.hpp
 load_data.h
 /home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+detect_face.h
+/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
 boost/regex.hpp
 -
 opencv/cv.hpp
@@ -100,6 +102,8 @@ opencv2/core/mat.hpp
 iostream
 -
 fstream
+-
+opencv/cv.hpp
 -
 opencv2/objdetect.hpp
 /home/swfxliyiyu/CLionProjects/face_rcg/src/opencv2/objdetect.hpp

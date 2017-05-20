@@ -270,6 +270,7 @@ CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/op
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
 
+CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: ../src/face_features/detect_face.h
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: ../src/face_features/load_data.h
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: ../src/face_features/pre_treat.cpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: ../src/face_features/pre_treat.h
@@ -409,6 +410,8 @@ CMakeFiles/face_rcg.dir/src/main.cpp.o: ../src/face_features/detect_face.h
 CMakeFiles/face_rcg.dir/src/main.cpp.o: ../src/face_features/load_data.h
 CMakeFiles/face_rcg.dir/src/main.cpp.o: ../src/face_features/pre_treat.h
 CMakeFiles/face_rcg.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv/cv.h
+CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv/cv.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv/cxcore.h
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/calib3d.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/calib3d/calib3d_c.h

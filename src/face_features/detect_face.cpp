@@ -158,8 +158,8 @@ map<string, float> rectMeanStdDev(string pts_path) {
  */
 Mat computeSIFT(Mat &src_img, vector<Point2f> &feas) {
 
-    cv::Ptr<Feature2D> f2d = xfeatures2d::SURF::create(100);
-
+//    cv::Ptr<Feature2D> f2d = xfeatures2d::SURF::create(100);
+    cv::Ptr<Feature2D> f2d = xfeatures2d::SIFT::create(0);
     // 描述子
     Mat descriptors;
     for (int i = 0; i < feas.size(); ++i) {
@@ -180,16 +180,16 @@ Mat computeSIFT(Mat &src_img, vector<Point2f> &feas) {
              [&](KeyPoint a, KeyPoint b){ return (bool) (a.response > b.response);});
         cout << kps.size() << "个关键点" << endl;
         int k = kps.size();
-        if (kps.size() > 3) {
-            kps.resize(3);
+        if (kps.size() > 1) {
+            kps.resize(1);
         }
         f2d->compute(src_img, kps, des_temp);
 //        cout << kps.size() << "个关键点可检测" << endl;
         int r = des_temp.rows;
-        for (int l = 0; l < 3 - r; ++l) {
-            des_temp.push_back(Mat::zeros(1, 64, CV_32F));
+        for (int l = 0; l < 1 - r; ++l) {
+            des_temp.push_back(Mat::zeros(1, 128, CV_32F));
         }
-        for (int m = 0; m < 3; ++m) {
+        for (int m = 0; m < 1; ++m) {
             descriptors.push_back(des_temp.row(m));
         }
 
@@ -331,7 +331,7 @@ void trainModel(string input_path, int itr, int n_vk) {
         }
     }
     // 对fk进行pca压缩
-    PCA pca(pca_fk_mat, Mat(), CV_PCA_DATA_AS_ROW, 0);
+//    PCA pca(pca_fk_mat, Mat(), CV_PCA_DATA_AS_ROW, 0);
     for (int l = 0; l < pca_fk_mat.rows;) {
         for (map<string, ImgInfo>::iterator it = img_map.begin();
              it != img_map.end(); ++it) {
@@ -339,11 +339,12 @@ void trainModel(string input_path, int itr, int n_vk) {
             for (int i = 0; i < n_vk; ++i) {
                 Mat fk_t = pca_fk_mat.row(l++);
                 Mat pca_fk(0, 0, CV_32F);
-                pca_fk = pca.project(fk_t);
+//                pca_fk = pca.project(fk_t);
 //                fk_t.copyTo(pca_fk);
                 cout << pca_fk << endl;
                 cout << pca_fk.size << endl;
-                Mat fk = pca_fk.t();
+//                Mat fk = pca_fk.t();
+                Mat fk = fk_t.t();
                 fk.push_back(1.f);
                 info.vector_fk.push_back(fk);
             }
@@ -382,7 +383,7 @@ void trainModel(string input_path, int itr, int n_vk) {
                 }
             }
             // 重新生成pca
-            pca = PCA(pca_fk_mat, Mat(), CV_PCA_DATA_AS_ROW, 0);
+//            pca = PCA(pca_fk_mat, Mat(), CV_PCA_DATA_AS_ROW, 0);
             // 计算将fk进行pca变换
             int pca_row = 0;
             for (map<string, ImgInfo>::iterator it = img_map.begin();
@@ -395,11 +396,12 @@ void trainModel(string input_path, int itr, int n_vk) {
                 for (int j = 0; j < n_vk; ++j) {
                     Mat fk_t = pca_fk_mat.row(pca_row++);
                     Mat pca_fk(0, 0, CV_32F);
-                    pca_fk = pca.project(fk_t);
+//                    pca_fk = pca.project(fk_t);
 //                    fk_t.copyTo(pca_fk);
                     cout << pca_fk << endl;
                     cout << pca_fk.size << endl;
-                    Mat fk = pca_fk.t();
+//                    Mat fk = pca_fk.t();
+                    Mat fk = fk_t.t();
                     fk.push_back(1.f);
                     info.vector_fk.push_back(fk);
                 }
@@ -408,18 +410,18 @@ void trainModel(string input_path, int itr, int n_vk) {
 
         // 保存pca矩阵
         // TODO
-        ostringstream ss;
-        ss << "../output/model/p" << i << ".pca";
-        ofstream os(ss.str());
-        os << pca.eigenvectors.rows << " " << pca.eigenvectors.cols << endl;
-        os << pca.eigenvectors;
-        os.close();
-        ostringstream ss1;
-        ss1 << "../output/model/p" << i << ".m";
-        os.open(ss1.str());
-        os << pca.mean.rows << " " << pca.mean.cols << endl;
-        os << pca.mean;
-        os.close();
+//        ostringstream ss;
+//        ss << "../output/model/p" << i << ".pca";
+//        ofstream os(ss.str());
+//        os << pca.eigenvectors.rows << " " << pca.eigenvectors.cols << endl;
+//        os << pca.eigenvectors;
+//        os.close();
+//        ostringstream ss1;
+//        ss1 << "../output/model/p" << i << ".m";
+//        os.open(ss1.str());
+//        os << pca.mean.rows << " " << pca.mean.cols << endl;
+//        os << pca.mean;
+//        os.close();
 
         // R_kj = (x_t*x)-1 * x_t * y
         // 计算本轮的x
@@ -510,7 +512,7 @@ int seed = 0;
 
 int normlRandom(float mean, float sdev) {
     default_random_engine engine((unsigned long) (time(0) + (++seed)));
-    normal_distribution<float> distribution(mean, sdev);
+    normal_distribution<float> distribution(mean, 1);
     return (int) lround(distribution(engine));
 }
 
