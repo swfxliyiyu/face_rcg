@@ -9,9 +9,9 @@
 #include <dirent.h>
 #include "opencv2/contrib/contrib.hpp"
 #include "load_data.h"
+#include "detect_face.h"
 #include <boost/regex.hpp>
 #include <opencv/cv.hpp>
-
 
 
 void saveFeatures(vector<Point2f> &vector, string path, string image_name);
@@ -74,10 +74,10 @@ void translate(cv::Mat const &src, cv::Mat &dst, int dx, int dy) {
  * @param t_w 目标图片宽度
  * @param t_h 目标图片高度
  */
-void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int t_w, int t_h) {
+void resizeAndSave(Mat &src_img, vector<Point2f> &features, Rect face_rect, string img_name, int t_w, int t_h) {
 
     // 输出地址
-    string output_path = "/home/swfxliyiyu/CLionProjects/face_rcg/input/images/";
+    string output_path = "../input/images/";
 //    // 判断文件是否存在
 //    fstream file;
 //    file.open(output_path + img_name + ".jpg", ios::in);
@@ -86,13 +86,14 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
 //        return;
 //    }
 
-    // 特征点包围盒
-    Rect rect = getFeatureRect(features);
+
+//    // 特征点包围盒
+//    Rect rect = getFeatureRect(features);
     // 计算新图片位置
-    int x = rect.x - rect.width / 4;
-    int y = rect.y - rect.height / 2;
-    int w = rect.width * 3 / 2;
-    int h = rect.height * 2;
+    int x = (float) face_rect.x - face_rect.width / 2;
+    int y = (float) face_rect.y - face_rect.height / 2;
+    int w = (float) face_rect.width * 2;
+    int h = (float) face_rect.height * 2;
 //    // 如果越界则不作为训练样本
 //    if (x < 0 || y < 0 || x + w >= src_img.cols || y + h >= src_img.rows) {
 //        std::cout << img_name << "采样越界，不作为训练样本" << endl;
@@ -101,53 +102,58 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
 //        return;
 //    }
     // 如果越界则平移图片
-    if (x < 0 || y < 0 || x + w >= src_img.cols || y + h >= src_img.rows) {
-        std::cout << img_name << "采样越界，进行平移" << endl;
-        cout << "x:" << x << endl;
-        cout << "y:" << y << endl;
-        cout << "x+w:" << x + w << endl;
-        cout << "y+h:" << y + h << endl;
-        cout << "cols:" << src_img.cols << endl;
-        cout << "rows:" << src_img.rows << endl;
-        int x_move = 0;
-        int y_move = 0;
-        if (x < 0) {
-            x_move = -x + 1;
-            x += x_move;
-        } else if (x + w >= src_img.cols) {
-            x_move = src_img.cols - x - w - 1;
-            x += x_move;
-        }
-        if (y < 0) {
-            y_move = -y + 1;
-            y += y_move;
-        } else if (y + h >= src_img.rows) {
-            y_move = src_img.rows - x - w - 1;
-            y += y_move;
-        }
-        // 变换图片
-        Mat temp;
-        translate(src_img, temp, x_move, y_move);
-        src_img = temp;
-        // 变换特征
-        resizeFeatures(features, x_move, y_move, 1, 1);
-        // 若变换后依然越界，则不做处理
-        if (x < 0 || y < 0 || x + w >= src_img.cols || y + h >= src_img.rows) {
-            std::cout << img_name << "平移后仍越界，不作为训练样本" << endl;
-            cout << "x:" << x << endl;
-            cout << "y:" << y << endl;
-            cout << "x+w:" << x + w << endl;
-            cout << "y+h:" << y + h << endl;
-            cout << "cols:" << src_img.cols << endl;
-            cout << "rows:" << src_img.rows << endl;
-            return;
-        }
-    }
+//    if (x < 0 || y < 0 || x + w >= src_img.cols || y + h >= src_img.rows) {
+//        std::cout << img_name << "采样越界，进行平移" << endl;
+//        cout << "x:" << x << endl;
+//        cout << "y:" << y << endl;
+//        cout << "x+w:" << x + w << endl;
+//        cout << "y+h:" << y + h << endl;
+//        cout << "cols:" << src_img.cols << endl;
+//        cout << "rows:" << src_img.rows << endl;
+//        int x_move = 0;
+//        int y_move = 0;
+//        if (x < 0) {
+//            x_move = -x + 1;
+//            x += x_move;
+//        } else if (x + w >= src_img.cols) {
+//            x_move = src_img.cols - x - w - 1;
+//            x += x_move;
+//        }
+//        if (y < 0) {
+//            y_move = -y + 1;
+//            y += y_move;
+//        } else if (y + h >= src_img.rows) {
+//            y_move = src_img.rows - x - w - 1;
+//            y += y_move;
+//        }
+//        // 变换图片
+//        Mat temp;
+//        translate(src_img, temp, x_move, y_move);
+//        src_img = temp;
+//        // 变换特征
+//        resizeFeatures(features, x_move, y_move, 1, 1);
+//        // 若变换后依然越界，则不做处理
+//        if (x < 0 || y < 0 || x + w >= src_img.cols || y + h >= src_img.rows) {
+//            std::cout << img_name << "平移后仍越界，不作为训练样本" << endl;
+//            cout << "x:" << x << endl;
+//            cout << "y:" << y << endl;
+//            cout << "x+w:" << x + w << endl;
+//            cout << "y+h:" << y + h << endl;
+//            cout << "cols:" << src_img.cols << endl;
+//            cout << "rows:" << src_img.rows << endl;
+//            return;
+//        }
+//    }
     // 获取新图片
-    Mat small_img(src_img, Range(y, y + h), Range(x, x + w));
+    Mat small_img(src_img, Range(y<0?0:y, y+h>=src_img.rows?src_img.rows-1:y+h-1),
+                  Range(x<0?0:x, x+w>=src_img.cols?src_img.cols-1:x+w-1));
+    Mat rect_img = Mat::zeros(h, w, CV_8UC3);
+    small_img.copyTo(rect_img.rowRange(y<0?-y:0,
+                                       y+h>=src_img.rows?src_img.rows-y-1:h-1).colRange(
+            x<0?-x:0, x+w>=src_img.cols?src_img.cols-x-1:w-1));
 
     // 调整大小
-    resize(small_img, small_img, Size(t_w, t_h));
+    resize(rect_img, rect_img, Size(t_w, t_h));
     // 调整特征点大小
     int x_move = -x;
     int y_move = -y;
@@ -160,7 +166,7 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
 
     // 保存图片
     string dst_path = output_path + img_name + ".jpg";
-    imwrite(dst_path, small_img);
+    imwrite(dst_path, rect_img);
 
 }
 
@@ -169,7 +175,7 @@ void resizeAndSave(Mat &src_img, vector<Point2f> &features, string img_name, int
  * @param features 特征点数组
  * @return
  */
-Rect getFeatureRect(const vector <Point2f> &features) {
+Rect getFeatureRect(const vector<Point2f> &features) {
     // 初始化特征框的上下左右边界
     int top = INT_MAX, bot = 0,
             left = INT_MAX, right = 0;
@@ -210,10 +216,10 @@ void saveFeatures(std::vector<Point2f> &features, string path, string image_name
  * @param dir_path 图片路径
  * @return vector 图片名称数组
  */
-vector<string> getImgNames(string dir_path){
+vector<string> getImgNames(string dir_path) {
     vector<string> files = getFiles(dir_path);
     // 提取目录中的不重复的图片名
-    for (vector<string>::iterator i = files.begin(); i < files.end(); ++i) {
+    for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
         string::iterator sit = --(i->end());
         if (*sit != 'g')
             files.erase(i);
@@ -233,15 +239,35 @@ vector<string> getImgNames(string dir_path){
  */
 void prt_images() {
     string dir_path = "../input/raw_images/";
-    vector<string> files = getFiles(dir_path);
+    vector<string> files = getImgNames(dir_path);
     // 对于每个文件名，处理图片
     for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {
         // 读取图片
-        Mat img = imread(dir_path + (*i) + ".jpg");
+        Mat img = imread(dir_path + (*i) + ".png");
+        cout << "正在预处理图片:" << *i << "..." << endl;
         // 读取特征
         vector<Point2f> f = load_features(dir_path + (*i) + ".pts");
+        Rect featureRect = getFeatureRect(f);
+        // 人脸包围框
+        vector<Rect> face_rects = detectFaceRect(img, 2.0);
+        // 如果图片检测不到人脸则跳过
+        if (face_rects.empty()) continue;
+        // 取与特征点最近的一张人脸框
+        Rect face_rect;
+        double diff = INT_MAX;
+        for (int j = 0; j < face_rects.size(); ++j) {
+            // 计算差距
+            Rect temp_rect = face_rects[j];
+            double temp_diff = pow((temp_rect.x - featureRect.x), 2)
+                               + pow((temp_rect.y - featureRect.y), 2)
+            + pow(temp_rect.width - featureRect.width, 2)
+            + pow(temp_rect.height - featureRect.height, 2);
+            // 若距离近则更新人脸框
+            face_rect = temp_diff < diff ? temp_rect : face_rect;
+            diff = temp_diff < diff ? temp_diff : diff;
+        }
         // 处理图片
-        resizeAndSave(img, f, *i, 400, 450);
+        resizeAndSave(img, f, face_rect, *i, 450, 400);
     }
 }
 
@@ -342,9 +368,9 @@ Mat rot_scale_align(Mat mat, float cx, float cy, int n) {
  * @param dirpath 特征点目录
  */
 void getMeanShape(string dirpath) {
+
     // 获取图片名
     vector<string> files = getImgNames(dirpath);
-
     // faces用于存所有人脸特征，规模为2n*N，n为图像数量，N为特征点数量
     Mat faces;
     vector<Point2f> f = load_features(dirpath + files[0] + ".pts");
@@ -389,15 +415,16 @@ void getMeanShape(string dirpath) {
     }
     // 保存平均脸
     Mat mat;
-    Rect rect =getFeatureRect(mean_shape);
+    Rect rect = getFeatureRect(mean_shape);
     mat.create(400, 450, CV_8UC3);
+
+    resizeFeatures(mean_shape, -rect.x, -rect.y, 1, 1);
     for (int l = 0; l < mean_shape.size(); ++l) {
         Point2f p = mean_shape.at(l);
-        circle(mat, p, 2, Scalar(0,255,0),-1,8,0);
+        circle(mat, p, 2, Scalar(0, 255, 0), -1, 8, 0);
     }
     imshow("平均脸", mat);
     waitKey(0);
-    resizeFeatures(mean_shape, -rect.x, -rect.y, 1, 1);
     saveFeatures(mean_shape, "../input/mean_shape.pts", "mean_shape");
     cout << "saved mean face" << endl;
 

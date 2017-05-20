@@ -10,8 +10,13 @@
 #include "pre_treat.h"
 #include <dirent.h>
 #include "opencv2/contrib/contrib.hpp"
-#include <boost/regex.hpp>
+#include <boost/tokenizer.hpp>
+#include <boost/algorithm/string.hpp>
+#include <boost/format.hpp>
+
+
 using namespace std;
+using namespace cv;
 
 vector<string> getFiles(string dirname) {
     DIR *dp;
@@ -51,4 +56,46 @@ std::vector<cv::Point2f> load_features(std::string feature_url) {
         points.push_back(point);
     }
     return points;
+}
+
+/**
+ * 根据指定地址载入矩阵
+ * @param mat_url
+ * @return
+ */
+void loadMat(string mat_url, Mat &result) {
+    ifstream input(mat_url);
+    int rows, cols;
+    input >> rows;
+    input >> cols;
+    string temp;
+    getline(input, temp);
+
+    result = Mat(rows, cols, CV_32F);
+    for (int i = 0; i < rows; ++i) {
+        string line;
+        getline(input, line);
+        vector<string> tokens;
+        boost::split(tokens, line, boost::is_any_of("[, ]"));
+        int index = 0;
+        for (int j = 0; j < cols; ++j) {
+            while (tokens[index].compare("") == 0)  {
+                index++;
+            }
+            float t;
+            sscanf(tokens[index++].c_str(), "%f", &t);
+            result.at<float>(i, j) = t;
+        }
+    }
+    cout << mat_url << ":" << result.size << endl;
+}
+
+bool existFile(string path) {
+    // 判断文件是否存在
+
+    if (access(path.c_str(), 0) != -1) {
+        cout << path << "已存在" << endl;
+        return true;
+    }
+    return false;
 }
