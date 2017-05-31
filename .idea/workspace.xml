@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17ac996e-387d-4d56-8f7d-028fd4156fd3" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/face_features/test.cpp.cpp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/face_features/test.cpp.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o" />
@@ -33,6 +34,46 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/mean_shape.pts" afterPath="$PROJECT_DIR$/input/mean_shape.pts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/detect_face.cpp" afterPath="$PROJECT_DIR$/src/face_features/detect_face.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/detect_face.h" afterPath="$PROJECT_DIR$/src/face_features/detect_face.h" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CMakeCCompiler.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CMakeCXXCompiler.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CMakeDetermineCompilerABI_C.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CMakeSystem.cmake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdC/a.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.1/CompilerIdCXX/a.out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/input/mean_sdev.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/input/mean_shape.pts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/face_rcg" afterPath="$PROJECT_DIR$/cmake-build-debug/face_rcg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/face_rcg.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/face_rcg.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/face_rcg.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/detect_face.cpp" afterPath="$PROJECT_DIR$/src/face_features/detect_face.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/load_data.cpp" afterPath="$PROJECT_DIR$/src/face_features/load_data.cpp" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/face_features/pre_treat.cpp" afterPath="$PROJECT_DIR$/src/face_features/pre_treat.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
@@ -53,8 +94,13 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1833">
               <caret line="92" column="2" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="2" />
+=======
+            <state relative-caret-position="-372">
+              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
               <folding>
                 <element signature="e#50#69#0" expanded="true" />
               </folding>
@@ -62,6 +108,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="types.hpp" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/include/opencv2/core/types.hpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -123,6 +170,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19890">
               <caret line="765" column="17" lean-forward="false" selection-start-line="765" selection-start-column="17" selection-end-line="765" selection-end-column="17" />
+=======
+      <file leaf-file-name="pre_treat.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-252">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
               <folding />
             </state>
           </provider>
@@ -131,7 +185,11 @@
       <file leaf-file-name="pre_treat.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.h">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="312">
+=======
+            <state relative-caret-position="240">
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
               <caret line="12" column="111" lean-forward="false" selection-start-line="12" selection-start-column="111" selection-end-line="12" selection-end-column="111" />
               <folding />
             </state>
@@ -141,8 +199,13 @@
       <file leaf-file-name="detect_face.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="585">
               <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
+=======
+            <state relative-caret-position="-5479">
+              <caret line="273" column="14" lean-forward="false" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
               <folding>
                 <element signature="e#50#82#0" expanded="true" />
               </folding>
@@ -150,22 +213,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_data.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
+      <file leaf-file-name="mean_sdev.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/mean_sdev.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1820">
-              <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
-              <folding>
-                <element signature="e#50#81#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="100">
+              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="load_data.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+=======
+      <find>SURF</find>
+      <find>TODO</find>
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
       <find>names.size</find>
       <find>&lt;&lt;</find>
       <find>d0</find>
@@ -182,13 +261,13 @@
       <find>10</find>
       <find>loadmat</find>
       <find>compu</find>
-      <find>time</find>
       <find>prt</find>
       <find>2.0</find>
       <find>detectface</find>
       <find>detect</find>
       <find>1.</find>
       <find>pca</find>
+<<<<<<< HEAD
       <find>0843</find>
       <find>400</find>
       <find>0030</find>
@@ -196,6 +275,13 @@
       <find>mean</find>
       <find>1.0</find>
       <find>random</find>
+=======
+      <find>output</find>
+      <find>time</find>
+      <find>s</find>
+      <find>sOL</find>
+      <find>5</find>
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,9 +296,9 @@
         <option value="$PROJECT_DIR$/output/model/p1.pca" />
         <option value="$PROJECT_DIR$/output/model/R0.mdl" />
         <option value="$PROJECT_DIR$/src/face_features/load_data.h" />
-        <option value="$PROJECT_DIR$/src/face_features/load_data.cpp" />
         <option value="$PROJECT_DIR$/src/face_features/pre_treat.h" />
         <option value="$PROJECT_DIR$/src/face_features/pre_treat.cpp" />
+        <option value="$PROJECT_DIR$/src/face_features/load_data.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/face_features/detect_face.cpp" />
         <option value="$PROJECT_DIR$/src/face_features/detect_face.h" />
@@ -228,10 +314,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
-    <option name="y" value="-11" />
-    <option name="width" value="1543" />
-    <option name="height" value="912" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1215" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -251,16 +337,6 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="face_rcg" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="face_rcg" />
@@ -313,7 +389,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="face_rcg" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="face_rcg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="input" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="face_rcg" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="face_rcg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmake-build-debug" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,6 +450,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cmake-build-debug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CMakeFiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -615,18 +723,29 @@
       <workItem from="1495162032474" duration="1230000" />
       <workItem from="1495206514832" duration="4973000" />
       <workItem from="1495261124238" duration="9370000" />
+<<<<<<< HEAD
       <workItem from="1495593628803" duration="2980000" />
       <workItem from="1496036246796" duration="17000" />
       <workItem from="1496202001998" duration="423000" />
+=======
+      <workItem from="1496049328146" duration="5381000" />
+      <workItem from="1496122351756" duration="427000" />
+      <workItem from="1496201499894" duration="104000" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="222194000" />
+=======
+    <option name="totallyTimeSpent" value="224686000" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="-11" width="1543" height="912" extended-state="6" />
+    <frame x="65" y="-4" width="1215" height="1028" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16811207" sideWeight="0.49333334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -643,9 +762,27 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="324" y="388" width="1068" height="512" />
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16625515" sideWeight="0.49333334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38793105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1521014" sideWeight="0.50666666" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27047414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="80" y="332" width="1497" height="183" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="395" y="415" width="845" height="413" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -687,6 +824,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -704,6 +842,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
     <entry file="file:///usr/local/include/opencv2/imgcodecs/imgcodecs_c.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -767,20 +907,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/random">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/opencv2/contrib/contrib.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9028">
-          <caret line="613" column="44" lean-forward="false" selection-start-line="613" selection-start-column="44" selection-end-line="613" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/5/random" />
+    <entry file="file:///usr/include/opencv2/contrib/contrib.hpp" />
     <entry file="file:///usr/local/include/opencv2/xfeatures2d.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22610">
@@ -789,6 +917,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input/images/image_0001.pts" />
+<<<<<<< HEAD
     <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11024">
@@ -803,6 +932,10 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h" />
+    <entry file="file:///usr/include/c++/5/ext/new_allocator.h" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
     <entry file="file:///usr/include/boost/serialization/access.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -852,16 +985,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
+    <entry file="file://$PROJECT_DIR$/output/model/p0.m" />
+    <entry file="file://$PROJECT_DIR$/output/model/p0.pca" />
+    <entry file="file://$PROJECT_DIR$/output/model/R1.mdl" />
+    <entry file="file://$PROJECT_DIR$/input/001.jpg" />
+    <entry file="file://$PROJECT_DIR$/output/images/image_0001.jpg" />
+    <entry file="file://$PROJECT_DIR$/input/image_0004.png" />
+    <entry file="file://$PROJECT_DIR$/input/image_0001.png" />
+    <entry file="file://$PROJECT_DIR$/input/mean_shape.pts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1820">
-          <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
-          <folding>
-            <element signature="e#50#81#0" expanded="true" />
-          </folding>
+          <caret line="70" column="15" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/output/model/p0.m" />
     <entry file="file://$PROJECT_DIR$/output/model/p0.pca" />
     <entry file="file://$PROJECT_DIR$/output/model/R1.mdl" />
@@ -880,21 +1018,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1820">
           <caret line="70" column="15" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2220">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/include/opencv2/core/mat.hpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19890">
-          <caret line="765" column="17" lean-forward="false" selection-start-line="765" selection-start-column="17" selection-end-line="765" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="-2460">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.h">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="111" lean-forward="false" selection-start-line="12" selection-start-column="111" selection-end-line="12" selection-end-column="111" />
+          <folding />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv2/core/mat.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="765" column="17" lean-forward="false" selection-start-line="765" selection-start-column="17" selection-end-line="765" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/mean_sdev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="312">
           <caret line="12" column="111" lean-forward="false" selection-start-line="12" selection-start-column="111" selection-end-line="12" selection-end-column="111" />
+=======
+        <state relative-caret-position="100">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
           <folding />
         </state>
       </provider>
@@ -921,6 +1085,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/face_features/pre_treat.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6903">
@@ -945,10 +1110,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+=======
+    <entry file="file:///usr/include/c++/6/bits/random.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="1919" column="10" lean-forward="false" selection-start-line="1919" selection-start-column="10" selection-end-line="1919" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/opencv2/core/mat.inl.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="762" column="0" lean-forward="false" selection-start-line="762" selection-start-column="0" selection-end-line="762" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/face_features/load_data.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/face_features/detect_face.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -956,23 +1142,50 @@
           <folding>
             <element signature="e#113#145#0" expanded="true" />
           </folding>
+=======
+    <entry file="file:///opt/opencv/modules/core/src/lapack.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="1243" column="0" lean-forward="false" selection-start-line="1243" selection-start-column="0" selection-end-line="1243" selection-end-column="0" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/face_features/test.cpp.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1379">
           <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
           <folding>
             <element signature="e#50#82#0" expanded="true" />
+          </folding>
+=======
+        <state relative-caret-position="-252">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1833">
+          <caret line="92" column="2" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="2" />
+=======
+        <state relative-caret-position="-5479">
+          <caret line="273" column="14" lean-forward="false" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
+>>>>>>> 88bd6df6333e342e78ee9b648f36f44d6316364e
+          <folding>
+            <element signature="e#50#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1833">
-          <caret line="92" column="2" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="2" />
+        <state relative-caret-position="-372">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
             <element signature="e#50#69#0" expanded="true" />
           </folding>

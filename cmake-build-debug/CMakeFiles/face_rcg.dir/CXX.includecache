@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.cpp
+/home/safe/CLionProjects/face_rcg/src/face_features/detect_face.cpp
 opencv2/imgcodecs.hpp
 -
 map
@@ -18,35 +18,33 @@ fstream
 opencv2/features2d.hpp
 -
 detect_face.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+/home/safe/CLionProjects/face_rcg/src/face_features/detect_face.h
 pre_treat.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.h
 load_data.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+/home/safe/CLionProjects/face_rcg/src/face_features/load_data.h
 opencv2/xfeatures2d.hpp
 -
 opencv/cv.hpp
 -
-boost/serialization/base_object.hpp
--
 boost/archive/binary_iarchive.hpp
--
-boost/archive/binary_oarchive.hpp
 -
 set
 -
+random
+-
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+/home/safe/CLionProjects/face_rcg/src/face_features/detect_face.h
 opencv2/imgcodecs.hpp
 -
 opencv2/objdetect.hpp
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/objdetect.hpp
+/home/safe/CLionProjects/face_rcg/src/face_features/opencv2/objdetect.hpp
 opencv2/imgproc.hpp
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/imgproc.hpp
+/home/safe/CLionProjects/face_rcg/src/face_features/opencv2/imgproc.hpp
 map
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/map
+/home/safe/CLionProjects/face_rcg/src/face_features/map
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp
+/home/safe/CLionProjects/face_rcg/src/face_features/load_data.cpp
 opencv2/core/mat.hpp
 -
 opencv2/imgcodecs.hpp
@@ -56,13 +54,11 @@ fstream
 iostream
 -
 load_data.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+/home/safe/CLionProjects/face_rcg/src/face_features/load_data.h
 pre_treat.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.h
 dirent.h
 -
-opencv2/contrib/contrib.hpp
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/contrib/contrib.hpp
 boost/tokenizer.hpp
 -
 boost/algorithm/string.hpp
@@ -70,11 +66,11 @@ boost/algorithm/string.hpp
 boost/format.hpp
 -
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+/home/safe/CLionProjects/face_rcg/src/face_features/load_data.h
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.cpp
+/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.cpp
 pre_treat.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.h
 opencv2/imgcodecs.hpp
 -
 iostream
@@ -83,22 +79,20 @@ fstream
 -
 dirent.h
 -
-opencv2/contrib/contrib.hpp
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/opencv2/contrib/contrib.hpp
 load_data.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+/home/safe/CLionProjects/face_rcg/src/face_features/load_data.h
 detect_face.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+/home/safe/CLionProjects/face_rcg/src/face_features/detect_face.h
 boost/regex.hpp
 -
 opencv/cv.hpp
 -
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.h
 opencv2/core/mat.hpp
 -
 
-/home/swfxliyiyu/CLionProjects/face_rcg/src/main.cpp
+/home/safe/CLionProjects/face_rcg/src/main.cpp
 iostream
 -
 fstream
@@ -106,13 +100,13 @@ fstream
 opencv/cv.hpp
 -
 opencv2/objdetect.hpp
-/home/swfxliyiyu/CLionProjects/face_rcg/src/opencv2/objdetect.hpp
+/home/safe/CLionProjects/face_rcg/src/opencv2/objdetect.hpp
 face_features/pre_treat.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h
+/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.h
 face_features/detect_face.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.h
+/home/safe/CLionProjects/face_rcg/src/face_features/detect_face.h
 face_features/load_data.h
-/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.h
+/home/safe/CLionProjects/face_rcg/src/face_features/load_data.h
 
 /usr/local/include/opencv/cv.h
 opencv2/core/core_c.h
@@ -1385,44 +1379,6 @@ opencv2/videostab/global_motion.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/global_motion.hpp
 opencv2/videostab/log.hpp
 /usr/local/include/opencv2/videostab/opencv2/videostab/log.hpp
-
-/usr/local/include/opencv2/viz.hpp
-opencv2/viz/types.hpp
--
-opencv2/viz/widgets.hpp
--
-opencv2/viz/viz3d.hpp
--
-opencv2/viz/vizcore.hpp
--
-
-/usr/local/include/opencv2/viz/types.hpp
-string
--
-opencv2/core.hpp
--
-opencv2/core/affine.hpp
--
-
-/usr/local/include/opencv2/viz/viz3d.hpp
-opencv2/core.hpp
--
-opencv2/viz/types.hpp
--
-opencv2/viz/widgets.hpp
--
-
-/usr/local/include/opencv2/viz/vizcore.hpp
-opencv2/viz/types.hpp
--
-opencv2/viz/widgets.hpp
--
-opencv2/viz/viz3d.hpp
--
-
-/usr/local/include/opencv2/viz/widgets.hpp
-opencv2/viz/types.hpp
--
 
 /usr/local/include/opencv2/xfeatures2d.hpp
 opencv2/features2d.hpp

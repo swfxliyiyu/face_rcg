@@ -1,8 +1,8 @@
-h_mean -31.9065
-h_sdev 15.1761
-w_mean -30.5534
-w_sdev 15.493
-x_mean 15.6693
-x_sdev 18.954
-y_mean 47.805
-y_sdev 7.47707
+h_mean -42.5039
+h_sdev 15.4154
+w_mean -19.6066
+w_sdev 17.1522
+x_mean 12.0355
+x_sdev 21.3678
+y_mean 52.1618
+y_sdev 7.65069

@@ -12,10 +12,9 @@
 #include "load_data.h"
 #include <opencv2/xfeatures2d.hpp>
 #include <opencv/cv.hpp>
-#include <boost/serialization/base_object.hpp>
 #include <boost/archive/binary_iarchive.hpp>
-#include <boost/archive/binary_oarchive.hpp>
 #include <set>
+#include <random>
 
 using namespace std;
 using namespace cv;
@@ -338,11 +337,11 @@ void trainModel(string input_path, int itr, int n_vk) {
             ImgInfo &info = it->second;
             for (int i = 0; i < n_vk; ++i) {
                 Mat fk_t = pca_fk_mat.row(l++);
-                Mat pca_fk(0, 0, CV_32F);
+//                Mat pca_fk(0, 0, CV_32F);
 //                pca_fk = pca.project(fk_t);
 //                fk_t.copyTo(pca_fk);
-                cout << pca_fk << endl;
-                cout << pca_fk.size << endl;
+//                cout << pca_fk << endl;
+//                cout << pca_fk.size << endl;
 //                Mat fk = pca_fk.t();
                 Mat fk = fk_t.t();
                 fk.push_back(1.f);
@@ -395,11 +394,11 @@ void trainModel(string input_path, int itr, int n_vk) {
                 // 每张图放入n_vk个fk
                 for (int j = 0; j < n_vk; ++j) {
                     Mat fk_t = pca_fk_mat.row(pca_row++);
-                    Mat pca_fk(0, 0, CV_32F);
+//                    Mat pca_fk(0, 0, CV_32F);
 //                    pca_fk = pca.project(fk_t);
 //                    fk_t.copyTo(pca_fk);
-                    cout << pca_fk << endl;
-                    cout << pca_fk.size << endl;
+//                    cout << pca_fk << endl;
+//                    cout << pca_fk.size << endl;
 //                    Mat fk = pca_fk.t();
                     Mat fk = fk_t.t();
                     fk.push_back(1.f);
@@ -450,7 +449,7 @@ void trainModel(string input_path, int itr, int n_vk) {
         cout << "正在计算R_k" << endl;
 //            R_k = (x_t*x).inv()*(x_t*y);
 
-        solve(x_t * x, x_t * y, R_k, CV_SVD_SYM);
+        solve(x_t*x, x_t*y, R_k, DECOMP_SVD);
         R_k = R_k.t();
         cout << R_k << endl;
 
@@ -512,7 +511,7 @@ int seed = 0;
 
 int normlRandom(float mean, float sdev) {
     default_random_engine engine((unsigned long) (time(0) + (++seed)));
-    normal_distribution<float> distribution(mean, sdev);
+    normal_distribution<float> distribution(mean, (float) (sdev / 2.333));
     return (int) lround(distribution(engine));
 }
 

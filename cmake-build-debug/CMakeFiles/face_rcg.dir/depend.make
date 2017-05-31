@@ -128,11 +128,6 @@ CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/videostab/ring_buffer.hpp
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/videostab/stabilizer.hpp
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/videostab/wobble_suppression.hpp
-CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/viz.hpp
-CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/viz/types.hpp
-CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/viz/viz3d.hpp
-CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/viz/vizcore.hpp
-CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/viz/widgets.hpp
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
@@ -261,11 +256,6 @@ CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/op
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/videostab/ring_buffer.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/videostab/stabilizer.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/videostab/wobble_suppression.hpp
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/viz.hpp
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/viz/types.hpp
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/viz/viz3d.hpp
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/viz/vizcore.hpp
-CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/viz/widgets.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
@@ -397,11 +387,6 @@ CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/op
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/videostab/ring_buffer.hpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/videostab/stabilizer.hpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/videostab/wobble_suppression.hpp
-CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/viz.hpp
-CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/viz/types.hpp
-CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/viz/viz3d.hpp
-CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/viz/vizcore.hpp
-CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/viz/widgets.hpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
@@ -533,11 +518,6 @@ CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/videostab/out
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/videostab/ring_buffer.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/videostab/stabilizer.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/videostab/wobble_suppression.hpp
-CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/viz.hpp
-CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/viz/types.hpp
-CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/viz/viz3d.hpp
-CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/viz/vizcore.hpp
-CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/viz/widgets.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/xfeatures2d.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/cuda.hpp
 CMakeFiles/face_rcg.dir/src/main.cpp.o: /usr/local/include/opencv2/xfeatures2d/nonfree.hpp
