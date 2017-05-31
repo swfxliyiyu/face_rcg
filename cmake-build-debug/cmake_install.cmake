@@ -1,4 +1,4 @@
-# Install script for directory: /home/swfxliyiyu/CLionProjects/face_rcg
+# Install script for directory: /home/safe/CLionProjects/face_rcg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/safe/CLionProjects/face_rcg/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

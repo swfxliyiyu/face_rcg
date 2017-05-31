@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o"
-  "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o"
-  "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o"
-  "/home/swfxliyiyu/CLionProjects/face_rcg/src/main.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o"
+  "/home/safe/CLionProjects/face_rcg/src/face_features/detect_face.cpp" "/home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o"
+  "/home/safe/CLionProjects/face_rcg/src/face_features/load_data.cpp" "/home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o"
+  "/home/safe/CLionProjects/face_rcg/src/face_features/pre_treat.cpp" "/home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o"
+  "/home/safe/CLionProjects/face_rcg/src/main.cpp" "/home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

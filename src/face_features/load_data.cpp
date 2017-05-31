@@ -9,7 +9,6 @@
 #include "load_data.h"
 #include "pre_treat.h"
 #include <dirent.h>
-#include "opencv2/contrib/contrib.hpp"
 #include <boost/tokenizer.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/format.hpp>

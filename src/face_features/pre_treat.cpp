@@ -7,7 +7,6 @@
 #include <iostream>
 #include <fstream>
 #include <dirent.h>
-#include "opencv2/contrib/contrib.hpp"
 #include "load_data.h"
 #include "detect_face.h"
 #include <boost/regex.hpp>
