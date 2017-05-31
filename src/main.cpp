@@ -9,6 +9,7 @@
 #include "face_features/pre_treat.h"
 #include "face_features/detect_face.h"
 #include "face_features/load_data.h"
+#include "face_features/test.h"
 
 using namespace std;
 using namespace cv;
@@ -25,7 +26,7 @@ string imgName = "../input/image_0001.png";
 int main() {
 
     // 预处理图片
-    string dir_path = "../input/images/";
+//    string dir_path = "../input/images/";
 //    prt_images();
 //    rectMeanStdDev(dir_path);
 //    getMeanShape(dir_path);
@@ -84,7 +85,7 @@ int main() {
 //    }
 
 
-//    Mat m = imread("../input/xxx.jpg");
+//    Mat m = imread("../input/testimages/image_0009.jpg");
 //
-//    test(m, "../input/", 5);
+//    test(m, "../input/", 1);
 }

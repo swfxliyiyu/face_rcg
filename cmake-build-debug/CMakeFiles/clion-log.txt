@@ -1,6 +1,6 @@
-/opt/clion-2017.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/safe/CLionProjects/face_rcg
--- The C compiler identification is GNU 6.3.0
--- The CXX compiler identification is GNU 6.3.0
+/home/swfxliyiyu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/swfxliyiyu/CLionProjects/face_rcg
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -13,7 +13,6 @@
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Found OpenCV: /usr/local (found version "3.2.0") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/safe/CLionProjects/face_rcg/cmake-build-debug
+-- Build files have been written to: /home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug

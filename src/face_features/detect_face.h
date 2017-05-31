@@ -23,5 +23,6 @@ vector<Point2f> randomGenerFeartures(const Rect &face_rect,
 void trainModel(string input_path, int itr, int n_vk);
 Mat generMatOfFeature(const vector<Point2f> &feas);
 Mat computeSIFT(Mat &src_img, vector<Point2f> &feas);
+void test(Mat &img, string input_path, int itr);
 
 #endif //FACE_RCG_DETECT_FACE_H

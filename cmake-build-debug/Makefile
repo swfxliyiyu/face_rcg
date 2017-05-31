@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2017.1.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/swfxliyiyu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/swfxliyiyu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/safe/CLionProjects/face_rcg
+CMAKE_SOURCE_DIR = /home/swfxliyiyu/CLionProjects/face_rcg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/safe/CLionProjects/face_rcg/cmake-build-debug
+CMAKE_BINARY_DIR = /home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/safe/CLionProjects/face_rcg/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2017.1.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/swfxliyiyu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion-2017.1.2/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/swfxliyiyu/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles /home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles /home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/safe/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,32 +204,32 @@ src/face_features/pre_treat.cpp.s:
 	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.s
 .PHONY : src/face_features/pre_treat.cpp.s
 
-src/face_features/test.cpp.o: src/face_features/test.cpp.cpp.o
+src/face_features/test.o: src/face_features/test.cpp.o
 
-.PHONY : src/face_features/test.cpp.o
+.PHONY : src/face_features/test.o
 
 # target to build an object file
-src/face_features/test.cpp.cpp.o:
-	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.o
-.PHONY : src/face_features/test.cpp.cpp.o
+src/face_features/test.cpp.o:
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.o
+.PHONY : src/face_features/test.cpp.o
 
-src/face_features/test.cpp.i: src/face_features/test.cpp.cpp.i
+src/face_features/test.i: src/face_features/test.cpp.i
 
-.PHONY : src/face_features/test.cpp.i
+.PHONY : src/face_features/test.i
 
 # target to preprocess a source file
-src/face_features/test.cpp.cpp.i:
-	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.i
-.PHONY : src/face_features/test.cpp.cpp.i
+src/face_features/test.cpp.i:
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.i
+.PHONY : src/face_features/test.cpp.i
 
-src/face_features/test.cpp.s: src/face_features/test.cpp.cpp.s
+src/face_features/test.s: src/face_features/test.cpp.s
 
-.PHONY : src/face_features/test.cpp.s
+.PHONY : src/face_features/test.s
 
 # target to generate assembly for a file
-src/face_features/test.cpp.cpp.s:
-	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.s
-.PHONY : src/face_features/test.cpp.cpp.s
+src/face_features/test.cpp.s:
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.s
+.PHONY : src/face_features/test.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -276,9 +276,9 @@ help:
 	@echo "... src/face_features/pre_treat.o"
 	@echo "... src/face_features/pre_treat.i"
 	@echo "... src/face_features/pre_treat.s"
-	@echo "... src/face_features/test.cpp.o"
-	@echo "... src/face_features/test.cpp.i"
-	@echo "... src/face_features/test.cpp.s"
+	@echo "... src/face_features/test.o"
+	@echo "... src/face_features/test.i"
+	@echo "... src/face_features/test.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

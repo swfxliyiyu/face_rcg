@@ -76,7 +76,7 @@ void translate(cv::Mat const &src, cv::Mat &dst, int dx, int dy) {
 void resizeAndSave(Mat &src_img, vector<Point2f> &features, Rect face_rect, string img_name, int t_w, int t_h) {
 
     // 输出地址
-    string output_path = "../input/images/";
+    string output_path = "../input/testimages/";
 //    // 判断文件是否存在
 //    fstream file;
 //    file.open(output_path + img_name + ".jpg", ios::in);
@@ -237,7 +237,7 @@ vector<string> getImgNames(string dir_path) {
  * 提取图片中包含人脸中的一部分，并对图片和相应特征点进行缩放
  */
 void prt_images() {
-    string dir_path = "../input/raw_images/";
+    string dir_path = "../input/testset/";
     vector<string> files = getImgNames(dir_path);
     // 对于每个文件名，处理图片
     for (vector<string>::iterator i = --files.end(); i >= files.begin(); --i) {

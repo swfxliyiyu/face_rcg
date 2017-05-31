@@ -17,5 +17,6 @@ void getMeanShape(string dirpath);
 vector<string> getImgNames(string dir_path);
 Rect getFeatureRect(const vector<Point2f> &vector);
 void resizeFeatures(vector<Point2f> &features, int x_move, int y_move, float w_scale, float h_scale);
+void saveFeatures(vector<Point2f> &vector, string path, string image_name);
 
 #endif //FACE_RCG_PRE_TREAT_H
