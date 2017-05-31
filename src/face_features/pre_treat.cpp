@@ -267,7 +267,7 @@ void prt_images() {
             diff = temp_diff < diff ? temp_diff : diff;
         }
         // 处理图片
-        resizeAndSave(img, f, face_rect, *i, 450, 400);
+        resizeAndSave(img, f, face_rect, *i, 400, 400);
     }
 }
 
@@ -416,7 +416,7 @@ void getMeanShape(string dirpath) {
     // 保存平均脸
     Mat mat;
     Rect rect = getFeatureRect(mean_shape);
-    mat.create(400, 450, CV_8UC3);
+    mat = Mat::ones(400, 400, CV_8UC3);
 
     resizeFeatures(mean_shape, -rect.x, -rect.y, 1, 1);
     for (int l = 0; l < mean_shape.size(); ++l) {

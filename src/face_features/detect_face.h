@@ -21,7 +21,6 @@ vector<Point2f> randomGenerFeartures(const Rect &face_rect,
                                      const Size &img_size,
                                      const vector<Point2f> &mean_shape);
 void trainModel(string input_path, int itr, int n_vk);
-void test(Mat &img, string input_path, int itr);
 Mat generMatOfFeature(const vector<Point2f> &feas);
 Mat computeSIFT(Mat &src_img, vector<Point2f> &feas);
 

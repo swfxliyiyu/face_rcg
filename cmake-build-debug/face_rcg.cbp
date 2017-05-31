@@ -104,6 +104,12 @@
 		<Unit filename="/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.h">
 			<Option target="face_rcg"/>
 		</Unit>
+		<Unit filename="/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/test.cpp.cpp">
+			<Option target="face_rcg"/>
+		</Unit>
+		<Unit filename="/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/test.cpp.h">
+			<Option target="face_rcg"/>
+		</Unit>
 		<Unit filename="/home/swfxliyiyu/CLionProjects/face_rcg/src/main.cpp">
 			<Option target="face_rcg"/>
 		</Unit>

@@ -204,6 +204,33 @@ src/face_features/pre_treat.cpp.s:
 	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.s
 .PHONY : src/face_features/pre_treat.cpp.s
 
+src/face_features/test.cpp.o: src/face_features/test.cpp.cpp.o
+
+.PHONY : src/face_features/test.cpp.o
+
+# target to build an object file
+src/face_features/test.cpp.cpp.o:
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.o
+.PHONY : src/face_features/test.cpp.cpp.o
+
+src/face_features/test.cpp.i: src/face_features/test.cpp.cpp.i
+
+.PHONY : src/face_features/test.cpp.i
+
+# target to preprocess a source file
+src/face_features/test.cpp.cpp.i:
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.i
+.PHONY : src/face_features/test.cpp.cpp.i
+
+src/face_features/test.cpp.s: src/face_features/test.cpp.cpp.s
+
+.PHONY : src/face_features/test.cpp.s
+
+# target to generate assembly for a file
+src/face_features/test.cpp.cpp.s:
+	$(MAKE) -f CMakeFiles/face_rcg.dir/build.make CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.s
+.PHONY : src/face_features/test.cpp.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -249,6 +276,9 @@ help:
 	@echo "... src/face_features/pre_treat.o"
 	@echo "... src/face_features/pre_treat.i"
 	@echo "... src/face_features/pre_treat.s"
+	@echo "... src/face_features/test.cpp.o"
+	@echo "... src/face_features/test.cpp.i"
+	@echo "... src/face_features/test.cpp.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

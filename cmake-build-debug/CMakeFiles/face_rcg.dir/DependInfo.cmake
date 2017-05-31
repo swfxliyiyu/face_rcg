@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/detect_face.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/detect_face.cpp.o"
   "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/load_data.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/load_data.cpp.o"
   "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/pre_treat.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/pre_treat.cpp.o"
+  "/home/swfxliyiyu/CLionProjects/face_rcg/src/face_features/test.cpp.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/face_features/test.cpp.cpp.o"
   "/home/swfxliyiyu/CLionProjects/face_rcg/src/main.cpp" "/home/swfxliyiyu/CLionProjects/face_rcg/cmake-build-debug/CMakeFiles/face_rcg.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

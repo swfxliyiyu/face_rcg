@@ -27,8 +27,8 @@ int main() {
     // 预处理图片
     string dir_path = "../input/images/";
 //    prt_images();
-    rectMeanStdDev(dir_path);
-    getMeanShape(dir_path);
+//    rectMeanStdDev(dir_path);
+//    getMeanShape(dir_path);
 
 //    trainModel("../input/", 5, 8);
 
@@ -77,6 +77,12 @@ int main() {
 
         for (int j = 0; j < ps.size(); ++j) {
             circle(temp, ps[j], 3, Scalar(255,255,0), -1, 8, 0);
+        }
+        for (int l = 0; l < 1; ++l) {
+            vector<Point2f> feas = randomGenerFeartures(face_rect, mean_sdev, Size(temp.rows, temp.cols), mean_shape);
+            for (int i = 0; i < feas.size(); ++i) {
+                circle(temp, feas[i], 3, cv::Scalar(0, 0, 255), -1, 8, 0);
+            }
         }
         imshow("", temp);
         waitKey(0);
