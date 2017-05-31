@@ -422,11 +422,12 @@ void trainModel(string input_path, int itr, int n_vk) {
 //        os << pca.mean;
 //        os.close();
 
-        string path("../output/model/R");
-        path += i;
-        path += "mdl";
-        if(existFile(path)) {
-            loadMat(path, R_k);
+        stringstream path;
+        path << "../output/model/R";
+        path << 0;
+        path << ".mdl";
+        if(existFile(path.str())) {
+            loadMat(path.str(), R_k);
         } else{
             // R_kj = (x_t*x)-1 * x_t * y
             // 计算本轮的x

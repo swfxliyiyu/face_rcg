@@ -32,8 +32,9 @@ int main() {
 //    getMeanShape(dir_path);
 
 
-    trainModel("../input/", 5, 5);
+//    trainModel("../input/", 5, 5);
 
+  
 
 //    vector<string> img_names = getImgNames("../input/images/");
 //    // 获取平均脸
