@@ -216,6 +216,71 @@ Mat computeSIFT(Mat &src_img, Mat &feas) {
 }
 
 /**
+ * 计算给定图片和特征点的SIFT特征描述
+ * @param src_img
+ * @param feas
+ * @param dst 128n*1维SIFT特征描述
+ */
+Mat computeSurf(Mat &src_img, vector<Point2f> &feas) {
+
+//    cv::Ptr<Feature2D> f2d = xfeatures2d::SURF::create(100);
+    cv::Ptr<Feature2D> f2d = xfeatures2d::SURF::create();
+    // 描述子
+    Mat descriptors;
+    for (int i = 0; i < feas.size(); ++i) {
+        // 用掩码确定位置
+        Point2f p = feas[i];
+        Mat mask = Mat::zeros(src_img.rows, src_img.cols, CV_8U);
+        for (int j = (int) (round(p.x) - 16); j < round(p.x) + 16; ++j) {
+            for (int k = (int) (round(p.y) - 16); k < (int) (round(p.y) + 16); ++k) {
+                mask.at<char>(Point(j, k)) = 1;
+            }
+        }
+//        cout << mask << endl;
+        Mat des_temp;
+        vector<KeyPoint> kps;
+        f2d->detect(src_img, kps, mask);
+        // 排序关键点
+        sort(kps.begin(), kps.end(),
+             [&](KeyPoint a, KeyPoint b){ return (bool) (a.response > b.response);});
+        cout << kps.size() << "个关键点" << endl;
+        int k = kps.size();
+        if (kps.size() > 3) {
+            kps.resize(3);
+        }
+        f2d->compute(src_img, kps, des_temp);
+//        cout << kps.size() << "个关键点可检测" << endl;
+        int r = des_temp.rows;
+        for (int l = 0; l < 3 - r; ++l) {
+            des_temp.push_back(Mat::zeros(1, 64, CV_32F));
+        }
+        for (int m = 0; m < 3; ++m) {
+            descriptors.push_back(des_temp.row(m));
+        }
+    }
+    cout << descriptors.size<< endl;
+    return descriptors.reshape(0, descriptors.rows * descriptors.cols);
+}
+
+/**
+ * 计算给定图片和特征点的SIFT特征描述
+ * @param src_img
+ * @param feas
+ * @param dst 128n*1维SIFT特征描述
+ */
+Mat computeSurf(Mat &src_img, Mat &feas) {
+    vector<Point2f> points;
+    for (int i = 0; i < feas.rows / 2; ++i) {
+        Point2f p;
+        p.x = feas.at<float>(2 * i);
+        p.y = feas.at<float>(2 * i + 1);
+        points.push_back(p);
+    }
+
+    return computeSIFT(src_img, points);
+}
+
+/**
  * 根据特征点生成矩阵
  * @param feas
  * @return
@@ -272,7 +337,7 @@ void trainModel(string input_path, int itr, int n_vk) {
     Mat pca_fk_mat(0, 0, CV_32F);
     set<string> name_set(img_names.begin(), img_names.end());
     int i = 0;
-    for (set<string>::iterator iterator1 = name_set.begin(); i < img_names.size(); ++i, ++iterator1) {
+    for (set<string>::iterator iterator1 = name_set.begin(); i < 2; ++i, ++iterator1) {
         // 获取图片名
         string img_name = *iterator1;
         cout << "正在生成图片:" << img_name << "的初始特征点..." << endl;
@@ -322,7 +387,7 @@ void trainModel(string input_path, int itr, int n_vk) {
             imgInfo.vector_dk.push_back(d0_mat);
             // f0是增广的
             cout << "计算SIFT..." << endl;
-            Mat f0_mat = computeSIFT(img, v0);
+            Mat f0_mat = computeSurf(img, v0);
             cout << f0_mat.t() << endl;
 //            f0_mat.push_back(1.f);
 //            imgInfo.vector_fk.push_back(f0_mat);
@@ -373,7 +438,7 @@ void trainModel(string input_path, int itr, int n_vk) {
                     vk = vk + (R_k * fk);
                     info.vector_dk[j] = (fea - (vk));
                     cout << "计算图片" << name << "的SIFT" << endl;
-                    Mat fk_mat = computeSIFT(img, vk);
+                    Mat fk_mat = computeSurf(img, vk);
                     // 将新的fk放入pca_fk_mat中
                     pca_fk_mat.push_back(fk_mat.t());
 //                    fk_mat.push_back(1.f);
@@ -475,38 +540,38 @@ void trainModel(string input_path, int itr, int n_vk) {
 
 
 
-//        for (map<string, ImgInfo>::iterator it = img_map.begin();
-//             it != img_map.end(); ++it) {
-//            ImgInfo &img = it->second;
-//            string imgname = it->first;
-//            Mat v0 = img.vector_vk[0];
-//            Mat image = imread("../input/images/" + imgname + ".jpg");
-//            Mat f0 = img.vector_vk[0];
-//
-//            Mat R = R_k;
+        for (map<string, ImgInfo>::iterator it = img_map.begin();
+             it != img_map.end(); ++it) {
+            ImgInfo &img = it->second;
+            string imgname = it->first;
+            Mat v0 = img.vector_vk[0];
+            Mat image = imread("../input/images/" + imgname + ".jpg");
+            Mat f0 = img.vector_fk[0];
+
+            Mat R = R_k;
 //            pca.project(f0.t(), f0);
-//
+
 //            f0 = f0.t();
-////            cout << f0.t() << endl;
-//
+//            cout << f0.t() << endl;
+
 //            f0.push_back(1.f);
-//            Mat d0 = (R*f0);
-//            Mat v1 = v0 + d0;
-//
-////            cout << "Rk" << R << endl;
-////            cout << "fk" << f0<< endl;
-////            cout << "d0" << d0 << endl;
-////            cout << "v1" << v0 << endl;
-//
-//            for (int l = 0; l < v0.rows / 2; ++l) {
-//                Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
-//
-//                circle(image, p1, 2, Scalar(0,255,255), -1,8,0);
-//                cout << p1 << endl;
-//            }
-//            imshow("", image);
-//            waitKey(0);
-//        }
+            Mat d0 = (R*f0);
+            Mat v1 = v0 + d0;
+
+//            cout << "Rk" << R << endl;
+//            cout << "fk" << f0<< endl;
+//            cout << "d0" << d0 << endl;
+//            cout << "v1" << v0 << endl;
+
+            for (int l = 0; l < v0.rows / 2; ++l) {
+                Point2f p1(v1.at<float>(2*l), v1.at<float>(2*l+1));
+
+                circle(image, p1, 2, Scalar(0,255,255), -1,8,0);
+                cout << p1 << endl;
+            }
+            imshow("", image);
+            waitKey(0);
+        }
     }
 }
 
@@ -521,7 +586,7 @@ int seed = 0;
 
 int normlRandom(float mean, float sdev) {
     default_random_engine engine((unsigned long) (time(0) + (++seed)));
-    normal_distribution<float> distribution(mean, (float) (sdev / 2.333));
+    normal_distribution<float> distribution(mean, (float) (sdev / 2.666));
     return (int) lround(distribution(engine));
 }
 
@@ -609,15 +674,15 @@ void test(Mat &img, string input_path, int itr) {
         stringstream ss1;
         ss1 << "../output/model/R" << i << ".mdl";
         loadMat(ss1.str(), Rk);
-        stringstream ss2;
-        ss2 << "../output/model/p" << i << ".pca";
-        loadMat(ss2.str(), pca_k);
-        stringstream ss3;
-        ss3 << "../output/model/p" << i << ".m";
-        loadMat(ss3.str(), m_k);
-        fk = computeSIFT(img, vk);
+//        stringstream ss2;
+//        ss2 << "../output/model/p" << i << ".pca";
+//        loadMat(ss2.str(), pca_k);
+//        stringstream ss3;
+//        ss3 << "../output/model/p" << i << ".m";
+//        loadMat(ss3.str(), m_k);
+        fk = computeSurf(img, vk);
         cout << "fk" << fk << endl;
-        fk = fk - m_k.t();
+//        fk = fk - m_k.t();
         gemm( pca_k, fk, 1, Mat(), 0, fk, 0 );
 //        normalize(fk, fk);
         fk.push_back(1.f);
